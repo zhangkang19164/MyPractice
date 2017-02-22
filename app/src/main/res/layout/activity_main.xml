@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.practice.MainActivity">
+
+    <Button
+        android:id="@+id/to_list_view"
+        style="@style/button_style"
+        android:text="ListView相关" />
+
+    <Button
+        android:id="@+id/to_recyclerview"
+        style="@style/button_style"
+        android:text="RecyclerView相关" />
+
+    <Button
+        android:id="@+id/to_text_view"
+        style="@style/button_style"
+        android:text="TextView相关" />
+
+
+</LinearLayout>
