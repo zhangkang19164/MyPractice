@@ -1,4 +1,4 @@
-package com.example.practice.recyclerview.tradecommon;
+package com.example.practice.recyclerview.tradecommon.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -50,7 +50,7 @@ public class TradeCommonAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             public void onClick(View v) {
                 if (null != onItemClickListener) {
                     int position = holder.getAdapterPosition();
-                    onItemClickListener.onClick(v, position, baseBeanList.get(position));
+                    onItemClickListener.onItemClick(v, position, baseBeanList.get(position));
                 }
             }
         });
@@ -99,7 +99,7 @@ public class TradeCommonAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     private static class TradeCommonTitleViewHolder extends RecyclerView.ViewHolder {
         private TextView textView;
 
-        public TradeCommonTitleViewHolder(View itemView) {
+        TradeCommonTitleViewHolder(View itemView) {
             super(itemView);
             textView = (TextView) itemView.findViewById(R.id.trade_common_title);
         }
@@ -108,13 +108,13 @@ public class TradeCommonAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     private static class TradeCommonListViewHolder extends RecyclerView.ViewHolder {
         private TextView textView;
 
-        public TradeCommonListViewHolder(View itemView) {
+        TradeCommonListViewHolder(View itemView) {
             super(itemView);
             textView = (TextView) itemView.findViewById(R.id.trade_common_list);
         }
     }
 
     public interface OnItemClickListener {
-        void onClick(View view, int position, TradeCommonBaseBean baseBean);
+        void onItemClick(View view, int position, TradeCommonBaseBean baseBean);
     }
 }

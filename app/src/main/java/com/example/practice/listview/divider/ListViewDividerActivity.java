@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewStub;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 
@@ -20,13 +21,14 @@ public class ListViewDividerActivity extends AppCompatActivity {
 		ListView listView= (ListView) findViewById(R.id.list_view);
 		listView.addHeaderView(new ViewStub(this));
 		listView.addFooterView(new ViewStub(this));
-		listView.setAdapter(new MyAdapter());
-		listView.setOnClickListener(new View.OnClickListener() {
+		MyAdapter myAdapter=new MyAdapter();
+		listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			@Override
-			public void onClick(View v) {
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
 			}
 		});
+		listView.setAdapter(myAdapter);
 	}
 	private static class MyAdapter extends BaseAdapter {
 

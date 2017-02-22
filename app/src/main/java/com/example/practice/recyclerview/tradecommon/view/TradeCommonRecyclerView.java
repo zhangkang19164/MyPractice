@@ -1,4 +1,4 @@
-package com.example.practice.recyclerview.tradecommon;
+package com.example.practice.recyclerview.tradecommon.view;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
@@ -8,6 +8,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.practice.recyclerview.tradecommon.adapter.TradeCommonAdapter;
 import com.example.practice.recyclerview.tradecommon.bean.TradeCommonBaseBean;
 import com.example.practice.recyclerview.tradecommon.itemdecoration.TradeCommonItemDecoration;
 
@@ -89,7 +90,7 @@ public class TradeCommonRecyclerView extends RecyclerView {
         TradeCommonAdapter tradeCommonAdapter = new TradeCommonAdapter(context, baseBeanList);
         tradeCommonAdapter.setOnItemClickListener(new TradeCommonAdapter.OnItemClickListener() {
             @Override
-            public void onClick(View view, int position, TradeCommonBaseBean baseBean) {
+            public void onItemClick(View view, int position, TradeCommonBaseBean baseBean) {
                 Toast.makeText(view.getContext(), baseBean.getToActivityId(), Toast.LENGTH_SHORT).show();
             }
         });

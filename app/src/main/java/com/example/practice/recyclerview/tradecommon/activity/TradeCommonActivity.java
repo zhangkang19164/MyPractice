@@ -1,18 +1,13 @@
-package com.example.practice.recyclerview.tradecommon;
+package com.example.practice.recyclerview.tradecommon.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.widget.Toast;
 
 import com.example.practice.R;
+import com.example.practice.recyclerview.tradecommon.view.TradeCommonRecyclerView;
 import com.example.practice.recyclerview.tradecommon.bean.TradeCommonBaseBean;
 import com.example.practice.recyclerview.tradecommon.bean.TradeCommonListBean;
 import com.example.practice.recyclerview.tradecommon.bean.TradeCommonTitleBean;
-import com.example.practice.recyclerview.tradecommon.itemdecoration.TradeCommonItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;

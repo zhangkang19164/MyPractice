@@ -20,7 +20,7 @@
         <activity android:name=".recyclerview.RecyclerViewMainActivity" />
         <activity android:name=".recyclerview.decoration.other.DecorationActivity" />
         <activity android:name=".recyclerview.grouping.RecyclerViewGroupingActivity" />
-        <activity android:name=".recyclerview.tradecommon.TradeCommonActivity" />
+        <activity android:name=".recyclerview.tradecommon.activity.TradeCommonActivity" />
         <activity android:name=".textview.spannablestring.SpannableStringMainActivity" />
         <activity android:name=".textview.TextViewMainActivity" />
     </application>

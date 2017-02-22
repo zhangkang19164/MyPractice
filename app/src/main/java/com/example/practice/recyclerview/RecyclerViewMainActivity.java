@@ -10,7 +10,7 @@ import com.example.practice.MainActivity;
 import com.example.practice.R;
 import com.example.practice.recyclerview.decoration.other.DecorationActivity;
 import com.example.practice.recyclerview.grouping.RecyclerViewGroupingActivity;
-import com.example.practice.recyclerview.tradecommon.TradeCommonActivity;
+import com.example.practice.recyclerview.tradecommon.activity.TradeCommonActivity;
 
 public class RecyclerViewMainActivity extends AppCompatActivity {
 
