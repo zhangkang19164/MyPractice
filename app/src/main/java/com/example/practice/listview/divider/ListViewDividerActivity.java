@@ -54,5 +54,10 @@ public class ListViewDividerActivity extends AppCompatActivity {
 			}
 			return convertView;
 		}
+
+		@Override
+		public int getItemViewType(int position) {
+			return super.getItemViewType(position);
+		}
 	}
 }

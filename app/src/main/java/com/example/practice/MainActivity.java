@@ -6,8 +6,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.example.practice.customview.CustomMainActivity;
+import com.example.practice.expandablelistview.ExpandableListViewMainActivity;
 import com.example.practice.listview.ListViewMainActivity;
 import com.example.practice.recyclerview.RecyclerViewMainActivity;
+import com.example.practice.refresh.RefreshMainActivity;
 import com.example.practice.textview.TextViewMainActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.to_list_view).setOnClickListener(onClickListener);
         findViewById(R.id.to_recyclerview).setOnClickListener(onClickListener);
         findViewById(R.id.to_text_view).setOnClickListener(onClickListener);
+        findViewById(R.id.to_expandable_listView).setOnClickListener(onClickListener);
+        findViewById(R.id.to_custom_view).setOnClickListener(onClickListener);
+        findViewById(R.id.to_refresh).setOnClickListener(onClickListener);
     }
 
     private View.OnClickListener onClickListener = new View.OnClickListener() {
@@ -34,6 +40,15 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.to_text_view:
                     toActivity = TextViewMainActivity.class;
+                    break;
+                case R.id.to_expandable_listView:
+                    toActivity = ExpandableListViewMainActivity.class;
+                    break;
+                case R.id.to_custom_view:
+                    toActivity = CustomMainActivity.class;
+                    break;
+                case R.id.to_refresh:
+                    toActivity = RefreshMainActivity.class;
                     break;
                 default:
                     toActivity = MainActivity.class;

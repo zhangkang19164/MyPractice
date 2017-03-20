@@ -21,5 +21,23 @@
         style="@style/button_style"
         android:text="TextView相关" />
 
+    <Button
+        android:id="@+id/to_expandable_listView"
+        style="@style/button_style"
+        android:text="ExpandableListView相关" />
 
+    <Button
+        android:id="@+id/to_custom_view"
+        style="@style/button_style"
+        android:text="自定义View相关" />
+
+    <Button
+        android:id="@+id/to_refresh"
+        style="@style/button_style"
+        android:text="下拉刷新,上拉加载更多" />
+
+    <Button
+        android:id="@+id/to_design_pattern"
+        style="@style/button_style"
+        android:text="框架" />
 </LinearLayout>

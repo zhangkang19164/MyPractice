@@ -23,6 +23,13 @@
         <activity android:name=".recyclerview.tradecommon.activity.TradeCommonActivity" />
         <activity android:name=".textview.spannablestring.SpannableStringMainActivity" />
         <activity android:name=".textview.TextViewMainActivity" />
+        <activity android:name=".expandablelistview.ExpandableListViewMainActivity" />
+        <activity android:name=".expandablelistview.type.ExpandableListViewTypeActivity" />
+        <activity android:name=".customview.CustomMainActivity" />
+        <activity android:name=".customview.linearlayoutcompat.LinearLayoutCompatMainActivity" />
+        <activity android:name=".refresh.RefreshMainActivity" />
+        <activity android:name=".refresh.frame.RefresFrameActivity" />
+        <activity android:name=".designpattern.DesignPatternMainActivity"></activity>
     </application>
 
 </manifest>
