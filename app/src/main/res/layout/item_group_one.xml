@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="34dp"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:background="@drawable/quote_title">
+
+    <TextView
+        android:id="@+id/item_group_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:drawableEnd="@mipmap/quote_load_more"
+        android:drawableRight="@mipmap/quote_load_more"
+        android:gravity="center_vertical"
+        android:textColor="@color/_5F5F5F"
+        android:textSize="14sp" />
+
+</LinearLayout>

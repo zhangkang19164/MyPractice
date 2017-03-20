@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_expandable_list_view_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.practice.expandablelistview.ExpandableListViewMainActivity">
+
+    <Button
+        android:id="@+id/to_expandable_listView_type"
+        style="@style/button_style"
+        android:text="Type相关" />
+</RelativeLayout>
