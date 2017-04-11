@@ -17,12 +17,6 @@ import butterknife.OnClick;
 
 public class PopupWindowMainActivity extends AppCompatActivity {
 
-
-    @BindView(R.id.to_popup_system)
-    Button toPopupSystem;
-    @BindView(R.id.to_popup_custom)
-    Button toPopupCustom;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +25,7 @@ public class PopupWindowMainActivity extends AppCompatActivity {
     }
 
 
-    @OnClick({R.id.to_popup_system, R.id.to_popup_custom})
+    @OnClick({R.id.to_popup_system,})
     public void onViewClicked(View view) {
         Class<? extends Activity> toActivity;
         switch (view.getId()) {

@@ -48,7 +48,8 @@
         <activity android:name=".systemview.popupwindow.custom.CustomPopupWindowMainActivity" />
         <activity android:name=".customview.detail.DetailMainActivity" />
         <activity android:name=".systemview.SystemViewMainActivity" />
-        <activity android:name=".dependencies.DependenciesMainActivity"></activity>
+        <activity android:name=".dependencies.DependenciesMainActivity" />
+        <activity android:name=".systemview.spinner.SpinnerMainActivity" />
     </application>
 
 </manifest>

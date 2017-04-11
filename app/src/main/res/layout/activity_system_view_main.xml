@@ -30,7 +30,6 @@
             style="@style/button_style"
             android:text="ExpandableListView相关" />
 
-
         <Button
             android:id="@+id/to_dialog"
             style="@style/button_style"
@@ -46,6 +45,11 @@
             android:id="@+id/to_popupwindow"
             style="@style/button_style"
             android:text="PopupWindow" />
+        <Button
+            android:id="@+id/to_spinner"
+            style="@style/button_style"
+            android:text="Spinner" />
+
     </android.support.v7.widget.LinearLayoutCompat>
 
 </ScrollView>
