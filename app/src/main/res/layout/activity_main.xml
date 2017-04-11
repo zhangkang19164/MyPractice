@@ -1,43 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context="com.example.practice.MainActivity">
 
-    <Button
-        android:id="@+id/to_list_view"
-        style="@style/button_style"
-        android:text="ListView相关" />
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/to_recyclerview"
-        style="@style/button_style"
-        android:text="RecyclerView相关" />
+        <Button
+            android:id="@+id/to_system_view"
+            style="@style/button_style"
+            android:text="系统控件" />
 
-    <Button
-        android:id="@+id/to_text_view"
-        style="@style/button_style"
-        android:text="TextView相关" />
+        <Button
+            android:id="@+id/to_dependencies"
+            style="@style/button_style"
+            android:text="第三方库" />
 
-    <Button
-        android:id="@+id/to_expandable_listView"
-        style="@style/button_style"
-        android:text="ExpandableListView相关" />
+        <Button
+            android:id="@+id/to_custom_view"
+            style="@style/button_style"
+            android:text="自定义View相关" />
 
-    <Button
-        android:id="@+id/to_custom_view"
-        style="@style/button_style"
-        android:text="自定义View相关" />
+        <Button
+            android:id="@+id/to_design_pattern"
+            style="@style/button_style"
+            android:text="框架" />
 
-    <Button
-        android:id="@+id/to_refresh"
-        style="@style/button_style"
-        android:text="下拉刷新,上拉加载更多" />
+    </android.support.v7.widget.LinearLayoutCompat>
 
-    <Button
-        android:id="@+id/to_design_pattern"
-        style="@style/button_style"
-        android:text="框架" />
-</LinearLayout>
+</ScrollView>

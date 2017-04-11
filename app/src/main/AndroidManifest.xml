@@ -15,21 +15,40 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".listview.divider.ListViewDividerActivity" />
-        <activity android:name=".listview.ListViewMainActivity" />
-        <activity android:name=".recyclerview.RecyclerViewMainActivity" />
-        <activity android:name=".recyclerview.decoration.other.DecorationActivity" />
-        <activity android:name=".recyclerview.grouping.RecyclerViewGroupingActivity" />
-        <activity android:name=".recyclerview.tradecommon.activity.TradeCommonActivity" />
-        <activity android:name=".textview.spannablestring.SpannableStringMainActivity" />
-        <activity android:name=".textview.TextViewMainActivity" />
-        <activity android:name=".expandablelistview.ExpandableListViewMainActivity" />
-        <activity android:name=".expandablelistview.type.ExpandableListViewTypeActivity" />
+        <activity android:name=".systemview.listview.divider.ListViewDividerActivity" />
+        <activity android:name=".systemview.listview.ListViewMainActivity" />
+        <activity android:name=".systemview.recyclerview.RecyclerViewMainActivity" />
+        <activity android:name=".systemview.recyclerview.decoration.other.DecorationActivity" />
+        <activity android:name=".systemview.recyclerview.grouping.RecyclerViewGroupingActivity" />
+        <activity android:name=".systemview.recyclerview.tradecommon.activity.TradeCommonActivity" />
+        <activity android:name=".systemview.textview.spannablestring.SpannableStringMainActivity" />
+        <activity android:name=".systemview.textview.TextViewMainActivity" />
+        <activity android:name=".systemview.expandablelistview.ExpandableListViewMainActivity" />
+        <activity android:name=".systemview.expandablelistview.type.ExpandableListViewTypeActivity" />
         <activity android:name=".customview.CustomMainActivity" />
         <activity android:name=".customview.linearlayoutcompat.LinearLayoutCompatMainActivity" />
-        <activity android:name=".refresh.RefreshMainActivity" />
-        <activity android:name=".refresh.frame.RefresFrameActivity" />
-        <activity android:name=".designpattern.DesignPatternMainActivity"></activity>
+        <activity android:name=".designpattern.refresh.RefreshMainActivity" />
+        <activity android:name=".designpattern.refresh.frame.RefresFrameActivity" />
+        <activity android:name=".designpattern.DesignPatternMainActivity" />
+        <activity android:name=".systemview.dialog.DialogMainActivity" />
+        <activity android:name=".systemview.dialog.system.PickerActivity" />
+        <activity android:name=".systemview.dialog.system.SystemDialogActivity" />
+        <activity android:name=".systemview.dialog.custom.CustomDialogActivity" />
+        <activity android:name=".systemview.viewpage.ViewPageMainActivity" />
+        <activity android:name=".systemview.viewpage.indicator.ViewPageIndicatorMainActivity" />
+        <activity android:name=".customview.attribute.CustomAttributeMainActivity" />
+        <activity
+            android:name=".systemview.viewpage.tablayout.TabLayoutMainActivity"
+            android:theme="@android:style/Theme.Black" />
+        <activity android:name=".dependencies.lottie.LottieMainActivity" />
+        <activity android:name=".dependencies.lottie.encapsulation.AnimationSplashView" />
+        <activity android:name=".dependencies.lottie.SplashActivity" />
+        <activity android:name=".systemview.popupwindow.PopupWindowMainActivity" />
+        <activity android:name=".systemview.popupwindow.system.SystemPopupWindowActivity" />
+        <activity android:name=".systemview.popupwindow.custom.CustomPopupWindowMainActivity" />
+        <activity android:name=".customview.detail.DetailMainActivity" />
+        <activity android:name=".systemview.SystemViewMainActivity" />
+        <activity android:name=".dependencies.DependenciesMainActivity"></activity>
     </application>
 
 </manifest>

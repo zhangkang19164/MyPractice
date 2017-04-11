@@ -5,7 +5,7 @@
     android:id="@+id/activity_list_view_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.practice.listview.ListViewMainActivity">
+    tools:context=".systemview.listview.ListViewMainActivity">
 
     <Button
         android:id="@+id/divider"

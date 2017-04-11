@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/custom_dialog_buttons_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:divider="@drawable/divider_custom_v"
+    app:showDividers="middle">
+
+    <Button
+        android:id="@+id/custom_dialog_button_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/_3C9FFC"
+        android:text="取消"
+        android:textSize="17sp"
+        android:background="@android:color/white"/>
+
+    <Button
+        android:id="@+id/custom_dialog_button_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/_3C9FFC"
+        android:text="退出"
+        android:textSize="17sp"
+        android:background="@android:color/white"/>
+
+
+</android.support.v7.widget.LinearLayoutCompat>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sex_items">
+        <item>男</item>
+        <item>女</item>
+        <item>外星人</item>
+    </string-array>
+
+    <declare-styleable name="MyExpandableListView">
+        <attr name="isShowChildDivider" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="MyTextView">
+        <attr name="time" format="string"/>
+    </declare-styleable>
+</resources>

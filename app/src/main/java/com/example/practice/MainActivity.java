@@ -7,55 +7,48 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.example.practice.customview.CustomMainActivity;
-import com.example.practice.expandablelistview.ExpandableListViewMainActivity;
-import com.example.practice.listview.ListViewMainActivity;
-import com.example.practice.recyclerview.RecyclerViewMainActivity;
-import com.example.practice.refresh.RefreshMainActivity;
-import com.example.practice.textview.TextViewMainActivity;
+import com.example.practice.dependencies.DependenciesMainActivity;
+import com.example.practice.designpattern.DesignPatternMainActivity;
+import com.example.practice.designpattern.refresh.RefreshMainActivity;
+import com.example.practice.systemview.SystemViewMainActivity;
+
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        findViewById(R.id.to_list_view).setOnClickListener(onClickListener);
-        findViewById(R.id.to_recyclerview).setOnClickListener(onClickListener);
-        findViewById(R.id.to_text_view).setOnClickListener(onClickListener);
-        findViewById(R.id.to_expandable_listView).setOnClickListener(onClickListener);
-        findViewById(R.id.to_custom_view).setOnClickListener(onClickListener);
-        findViewById(R.id.to_refresh).setOnClickListener(onClickListener);
+        ButterKnife.bind(this);
     }
 
-    private View.OnClickListener onClickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Class<? extends Activity> toActivity;
-            switch (v.getId()) {
-                case R.id.to_list_view:
-                    toActivity = ListViewMainActivity.class;
-                    break;
-                case R.id.to_recyclerview:
-                    toActivity = RecyclerViewMainActivity.class;
-                    break;
-                case R.id.to_text_view:
-                    toActivity = TextViewMainActivity.class;
-                    break;
-                case R.id.to_expandable_listView:
-                    toActivity = ExpandableListViewMainActivity.class;
-                    break;
-                case R.id.to_custom_view:
-                    toActivity = CustomMainActivity.class;
-                    break;
-                case R.id.to_refresh:
-                    toActivity = RefreshMainActivity.class;
-                    break;
-                default:
-                    toActivity = MainActivity.class;
-                    break;
-            }
-            startActivity(new Intent(v.getContext(), toActivity));
-        }
-    };
 
+    @OnClick({R.id.to_system_view, R.id.to_dependencies,
+            R.id.to_custom_view, R.id.to_design_pattern,
+    })
+    public void onViewClicked(View view) {
+        Class<? extends Activity> toActivity;
+        switch (view.getId()) {
+            case R.id.to_system_view:
+                toActivity = SystemViewMainActivity.class;
+                break;
+            case R.id.to_dependencies:
+                toActivity = DependenciesMainActivity.class;
+                break;
+            case R.id.to_custom_view:
+                toActivity = CustomMainActivity.class;
+                break;
+            case R.id.to_design_pattern:
+                toActivity = DesignPatternMainActivity.class;
+                break;
+
+            default:
+                toActivity = MainActivity.class;
+                break;
+        }
+        startActivity(new Intent(view.getContext(), toActivity));
+    }
 }

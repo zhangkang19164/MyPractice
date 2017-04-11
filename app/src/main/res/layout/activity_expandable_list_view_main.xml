@@ -4,7 +4,7 @@
     android:id="@+id/activity_expandable_list_view_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.practice.expandablelistview.ExpandableListViewMainActivity">
+    tools:context=".systemview.expandablelistview.ExpandableListViewMainActivity">
 
     <Button
         android:id="@+id/to_expandable_listView_type"
