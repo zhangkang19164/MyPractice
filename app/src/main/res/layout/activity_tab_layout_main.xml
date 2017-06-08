@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="36dp"
         android:theme="@style/Theme.AppCompat"
+        android:background="@android:color/white"
         app:paddingStart="120dp"
         app:tabBackground="@android:color/white"
         app:tabIndicatorColor="@color/_FF3E30"

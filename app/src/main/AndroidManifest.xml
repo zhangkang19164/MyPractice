@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Main2Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -50,6 +50,16 @@
         <activity android:name=".systemview.SystemViewMainActivity" />
         <activity android:name=".dependencies.DependenciesMainActivity" />
         <activity android:name=".systemview.spinner.SpinnerMainActivity" />
+        <activity android:name=".customview.picker.PickerMainActivity" />
+        <activity android:name=".other.OtherMainActivity" />
+        <activity android:name=".other.loadconfig.LoadConfigMainActivity" />
+        <activity android:name=".systemview.recyclerview.tradelist.TradeListMainActivity" />
+        <activity android:name=".other.bezier.BezierMainActivity" />
+        <activity android:name=".dependencies.wheelview.WheelviewMainActivity" />
+        <activity android:name=".systemview.listview.empty.EmptyMainActivity" />
+        <activity android:name=".systemview.recyclerview.edit.RecyclerEditActivity" />
+        <activity android:name=".systemview.recyclerview.market.MarketActivity" />
+        <activity android:name=".dependencies.xrecyclerview.XRecyclerViewActivity" />
     </application>
 
 </manifest>

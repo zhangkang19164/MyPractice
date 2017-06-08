@@ -1,10 +1,16 @@
 package com.example.practice.systemview.viewpage.indicator;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentPagerAdapter;
+import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.util.Log;
+import android.util.TypedValue;
+import android.view.Gravity;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.practice.R;
 
@@ -12,9 +18,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ViewPageIndicatorMainActivity extends AppCompatActivity {
-    private String[] strings = new String[]{"短信", "收藏", "推荐"};
+    private static final String TAG = "ViewPageIndicatorMain";
+    private String[] strings = new String[]{"沪深", "板块", "沪港通", "深港通", "港股", "环球", "更多"};
 
-    private List<ViewPageIndicatorFragment> views = new ArrayList<>();
+    private List<TextView> views = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,23 +33,55 @@ public class ViewPageIndicatorMainActivity extends AppCompatActivity {
 
     private void initDatas() {
         for (String string : strings) {
-            ViewPageIndicatorFragment fragment = ViewPageIndicatorFragment.newIntance(string);
-            views.add(fragment);
+            TextView textView = new TextView(this);
+            textView.setBackgroundColor(ContextCompat.getColor(this, android.R.color.white));
+            textView.setGravity(Gravity.CENTER);
+            textView.setText(string);
+            textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 24);
+            views.add(textView);
         }
     }
 
     private void initViews() {
-        Indicator indicator = (Indicator) findViewById(R.id.indictor_indiator);
+        final Indicator indicator = (Indicator) findViewById(R.id.indictor_indiator);
         ViewPager viewPager = (ViewPager) findViewById(R.id.indictor_viewpage);
-        viewPager.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
-            @Override
-            public Fragment getItem(int position) {
-                return views.get(position);
-            }
-
+        viewPager.setAdapter(new PagerAdapter() {
             @Override
             public int getCount() {
                 return views.size();
+            }
+
+            @Override
+            public boolean isViewFromObject(View view, Object object) {
+                return view == object;
+            }
+
+            @Override
+            public Object instantiateItem(ViewGroup container, int position) {
+                TextView textView = views.get(position);
+                container.addView(textView);
+                return textView;
+            }
+
+            @Override
+            public void destroyItem(ViewGroup container, int position, Object object) {
+                container.removeView(views.get(position));
+            }
+        });
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                indicator.setPageScrolled(position,positionOffset);
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
             }
         });
     }

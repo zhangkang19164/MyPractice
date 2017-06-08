@@ -21,4 +21,14 @@
         android:id="@+id/to_tradecommon"
         style="@style/button_style"
         android:text="交易通用" />
+
+    <Button
+        android:id="@+id/to_trade_list"
+        style="@style/button_style"
+        android:text="交易列表" />
+
+    <Button
+        android:id="@+id/to_edit"
+        style="@style/button_style"
+        android:text="列表中有输入框" />
 </LinearLayout>

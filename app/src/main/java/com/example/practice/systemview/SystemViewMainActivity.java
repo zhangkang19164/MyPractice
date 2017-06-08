@@ -13,6 +13,7 @@ import com.example.practice.systemview.expandablelistview.ExpandableListViewMain
 import com.example.practice.systemview.listview.ListViewMainActivity;
 import com.example.practice.systemview.popupwindow.PopupWindowMainActivity;
 import com.example.practice.systemview.recyclerview.RecyclerViewMainActivity;
+import com.example.practice.systemview.spinner.SpinnerMainActivity;
 import com.example.practice.systemview.textview.TextViewMainActivity;
 import com.example.practice.systemview.viewpage.ViewPageMainActivity;
 
@@ -31,7 +32,7 @@ public class SystemViewMainActivity extends AppCompatActivity {
     @OnClick({R.id.to_list_view, R.id.to_recyclerview,
             R.id.to_text_view, R.id.to_expandable_listView,
             R.id.to_dialog, R.id.to_viewpage,
-            R.id.to_popupwindow})
+            R.id.to_popupwindow,R.id.to_spinner})
     public void onViewClicked(View view) {
         Class<? extends Activity> toActivity;
         switch (view.getId()) {
@@ -55,6 +56,9 @@ public class SystemViewMainActivity extends AppCompatActivity {
                 break;
             case R.id.to_popupwindow:
                 toActivity = PopupWindowMainActivity.class;
+                break;
+            case R.id.to_spinner:
+                toActivity = SpinnerMainActivity.class;
                 break;
             default:
                 toActivity = MainActivity.class;

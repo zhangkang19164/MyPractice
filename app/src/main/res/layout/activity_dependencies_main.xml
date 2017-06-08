@@ -15,7 +15,15 @@
             style="@style/button_style"
             android:text="Lottie库使用" />
 
+        <Button
+            android:id="@+id/to_wheelview"
+            style="@style/button_style"
+            android:text="Wheelview库使用" />
 
+        <Button
+            android:id="@+id/to_x_recycler_view"
+            style="@style/button_style"
+            android:text="XRecyclerView库使用" />
     </android.support.v7.widget.LinearLayoutCompat>
 
 </ScrollView>

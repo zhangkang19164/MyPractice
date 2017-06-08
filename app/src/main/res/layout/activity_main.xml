@@ -29,7 +29,10 @@
             android:id="@+id/to_design_pattern"
             style="@style/button_style"
             android:text="框架" />
-
+        <Button
+            android:id="@+id/to_other"
+            style="@style/button_style"
+            android:text="其他的" />
     </android.support.v7.widget.LinearLayoutCompat>
 
 </ScrollView>

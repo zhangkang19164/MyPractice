@@ -20,4 +20,9 @@
         android:id="@+id/to_attribute"
         style="@style/button_style"
         android:text="自定义属性" />
+
+    <Button
+        android:id="@+id/to_picker"
+        style="@style/button_style"
+        android:text="选择器" />
 </LinearLayout>

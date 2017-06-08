@@ -9,6 +9,8 @@ import android.view.View;
 import com.example.practice.MainActivity;
 import com.example.practice.R;
 import com.example.practice.dependencies.lottie.SplashActivity;
+import com.example.practice.dependencies.wheelview.WheelviewMainActivity;
+import com.example.practice.dependencies.xrecyclerview.XRecyclerViewActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -22,14 +24,20 @@ public class DependenciesMainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.to_lottie,})
+    @OnClick({R.id.to_lottie, R.id.to_wheelview,
+            R.id.to_x_recycler_view})
     public void onViewClicked(View view) {
         Class<? extends Activity> toActivity;
         switch (view.getId()) {
             case R.id.to_lottie:
                 toActivity = SplashActivity.class;
                 break;
-
+            case R.id.to_wheelview:
+                toActivity = WheelviewMainActivity.class;
+                break;
+            case R.id.to_x_recycler_view:
+                toActivity = XRecyclerViewActivity.class;
+                break;
             default:
                 toActivity = MainActivity.class;
                 break;

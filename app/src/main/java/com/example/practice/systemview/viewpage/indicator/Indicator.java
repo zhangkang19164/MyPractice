@@ -26,4 +26,7 @@ public class Indicator extends LinearLayoutCompat {
     public Indicator(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
+
+    public void setPageScrolled(int position, float positionOffset) {
+    }
 }

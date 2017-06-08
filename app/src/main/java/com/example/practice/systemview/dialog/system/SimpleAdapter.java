@@ -50,4 +50,9 @@ public class SimpleAdapter extends BaseAdapter {
 		t2.setText(list.get(position)[1]);
 		return view;
 	}
+
+	public void setList(List<String[]> list) {
+		this.list = list;
+		notifyDataSetChanged();
+	}
 }

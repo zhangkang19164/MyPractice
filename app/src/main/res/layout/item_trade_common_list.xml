@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="55dp"
     android:drawableRight="@mipmap/t_list_enter_arrow"
+    android:drawableEnd="@mipmap/t_list_enter_arrow"
     android:gravity="center_vertical"
     android:lineSpacingExtra="4dp"
     android:paddingLeft="15dp"

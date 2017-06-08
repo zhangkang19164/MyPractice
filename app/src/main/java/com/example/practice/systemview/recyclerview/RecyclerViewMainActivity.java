@@ -9,8 +9,10 @@ import android.view.View;
 import com.example.practice.MainActivity;
 import com.example.practice.R;
 import com.example.practice.systemview.recyclerview.decoration.other.DecorationActivity;
+import com.example.practice.systemview.recyclerview.edit.RecyclerEditActivity;
 import com.example.practice.systemview.recyclerview.grouping.RecyclerViewGroupingActivity;
 import com.example.practice.systemview.recyclerview.tradecommon.activity.TradeCommonActivity;
+import com.example.practice.systemview.recyclerview.tradelist.TradeListMainActivity;
 
 public class RecyclerViewMainActivity extends AppCompatActivity {
 
@@ -21,6 +23,8 @@ public class RecyclerViewMainActivity extends AppCompatActivity {
         findViewById(R.id.to_decoration).setOnClickListener(onClickListener);
         findViewById(R.id.to_grouping).setOnClickListener(onClickListener);
         findViewById(R.id.to_tradecommon).setOnClickListener(onClickListener);
+        findViewById(R.id.to_trade_list).setOnClickListener(onClickListener);
+        findViewById(R.id.to_edit).setOnClickListener(onClickListener);
     }
 
     private View.OnClickListener onClickListener = new View.OnClickListener() {
@@ -36,6 +40,12 @@ public class RecyclerViewMainActivity extends AppCompatActivity {
                     break;
                 case R.id.to_decoration:
                     toActivity = DecorationActivity.class;
+                    break;
+                case R.id.to_trade_list:
+                    toActivity = TradeListMainActivity.class;
+                    break;
+                case R.id.to_edit:
+                    toActivity = RecyclerEditActivity.class;
                     break;
                 default:
                     toActivity = MainActivity.class;

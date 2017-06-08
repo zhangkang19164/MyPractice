@@ -17,21 +17,27 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="短信" />
+            android:text="沪深" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="收藏" />
+            android:text="板块" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="推荐" />
+            android:text="沪港通" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="深港通" />
     </com.example.practice.systemview.viewpage.indicator.Indicator>
 
     <android.support.v4.view.ViewPager
