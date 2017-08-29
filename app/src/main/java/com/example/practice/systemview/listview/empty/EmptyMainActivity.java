@@ -21,8 +21,10 @@ import butterknife.OnClick;
 
 public class EmptyMainActivity extends AppCompatActivity {
 
-//    @BindView(R.id.empty_view)
-//    TextView emptyView;
+    @BindView(R.id.empty_view)
+    TextView emptyView;
+    @BindView(R.id.empty_view2)
+    TextView emptyView2;
     @BindView(R.id.list_view)
     ListView listView;
     @BindView(R.id.button_01)
@@ -38,15 +40,21 @@ public class EmptyMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_empty_main);
         ButterKnife.bind(this);
+        for (int i = 0; i < 10; i++) {
+            list.add("");
+        }
         initView();
     }
 
     private void initView() {
-        View emptyView = LayoutInflater.from(this).inflate(R.layout.zhi_shu_quote_item, null);
-        ((ViewGroup)listView.getParent()).addView(emptyView);
-        listView.setEmptyView(emptyView);
+//        View emptyView = LayoutInflater.from(this).inflate(R.layout.zhi_shu_quote_item, null);
+//        ((ViewGroup)listView.getParent()).addView(emptyView);
         myAdapter = new MyAdapter();
-//        listView.setAdapter(myAdapter);
+        listView.setAdapter(myAdapter);
+        listView.setEmptyView(emptyView);
+        listView.setEmptyView(emptyView2);
+
+
     }
 
     @OnClick({R.id.button_01, R.id.button_02})

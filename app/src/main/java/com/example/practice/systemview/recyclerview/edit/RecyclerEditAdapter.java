@@ -101,6 +101,7 @@ public class RecyclerEditAdapter extends RecyclerView.Adapter<RecyclerEditAdapte
         notifyDataSetChanged();
     }
 
+
     public void editText(EditText editText, String inputString, TextWatcher textWatcher) {
         if (editText instanceof TextWatcher) {
             editText.removeTextChangedListener((TextWatcher) editText.getTag());

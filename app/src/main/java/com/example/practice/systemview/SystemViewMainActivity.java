@@ -9,6 +9,7 @@ import android.view.View;
 import com.example.practice.MainActivity;
 import com.example.practice.R;
 import com.example.practice.systemview.dialog.DialogMainActivity;
+import com.example.practice.systemview.edittext.EditTextMainActivity;
 import com.example.practice.systemview.expandablelistview.ExpandableListViewMainActivity;
 import com.example.practice.systemview.listview.ListViewMainActivity;
 import com.example.practice.systemview.popupwindow.PopupWindowMainActivity;
@@ -32,7 +33,7 @@ public class SystemViewMainActivity extends AppCompatActivity {
     @OnClick({R.id.to_list_view, R.id.to_recyclerview,
             R.id.to_text_view, R.id.to_expandable_listView,
             R.id.to_dialog, R.id.to_viewpage,
-            R.id.to_popupwindow,R.id.to_spinner})
+            R.id.to_popupwindow, R.id.to_spinner})
     public void onViewClicked(View view) {
         Class<? extends Activity> toActivity;
         switch (view.getId()) {
@@ -59,6 +60,9 @@ public class SystemViewMainActivity extends AppCompatActivity {
                 break;
             case R.id.to_spinner:
                 toActivity = SpinnerMainActivity.class;
+                break;
+            case R.id.to_edittext:
+                toActivity = EditTextMainActivity.class;
                 break;
             default:
                 toActivity = MainActivity.class;

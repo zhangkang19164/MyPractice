@@ -9,6 +9,7 @@
     <com.example.practice.customview.attribute.MyTextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:maxLines="1"
         app:time="这是测试的"
         app:time_num="two" />
 </LinearLayout>

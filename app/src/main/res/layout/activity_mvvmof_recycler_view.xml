@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.example.practice.other.databinding.recyclerview.MVVMOfRecyclerViewActivity.Presenter" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            style="@style/button_style"
+            android:onClick="@{presenter.addItem}"
+            android:text="增加一个" />
+
+        <Button
+            style="@style/button_style"
+            android:onClick="@{presenter.deleteItem}"
+            android:text="删除一个" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</layout>

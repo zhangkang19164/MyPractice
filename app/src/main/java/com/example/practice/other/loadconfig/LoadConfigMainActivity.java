@@ -12,7 +12,7 @@ import android.view.View;
 
 import com.example.practice.R;
 import com.example.practice.systemview.recyclerview.common.CommonRecyclerViewAdapter;
-import com.example.practice.systemview.recyclerview.common.CommonViewHoler;
+import com.example.practice.systemview.recyclerview.common.CommonViewHolder;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -61,7 +61,7 @@ public class LoadConfigMainActivity extends AppCompatActivity {
         loadConfigRecyclerView.setAdapter(new CommonRecyclerViewAdapter<ConfigItem>(configItemList, R.layout.item_trade_common_list) {
 
             @Override
-            public void convert(CommonViewHoler holder, ConfigItem configItem) {
+            public void convert(CommonViewHolder holder, ConfigItem configItem) {
                 String s = "根节点是 " + configItem.element + " name = " + configItem.name + " hint = "
                         + configItem.hint + " caption = " + configItem.caption;
                 holder.setText(R.id.trade_common_list, s);
@@ -72,7 +72,7 @@ public class LoadConfigMainActivity extends AppCompatActivity {
     private void loadConfig() {
 
         InputStream inputStream;
-        inputStream = getResources().openRawResource(R.raw.config);
+        inputStream = getResources().openRawResource(R.raw.test);
         XmlPullParser xmlPullParser = Xml.newPullParser();
 
         ConfigItem configItem = null;

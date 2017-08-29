@@ -20,38 +20,30 @@ public class RecyclerViewMainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_view_main);
-        findViewById(R.id.to_decoration).setOnClickListener(onClickListener);
-        findViewById(R.id.to_grouping).setOnClickListener(onClickListener);
-        findViewById(R.id.to_tradecommon).setOnClickListener(onClickListener);
-        findViewById(R.id.to_trade_list).setOnClickListener(onClickListener);
-        findViewById(R.id.to_edit).setOnClickListener(onClickListener);
     }
 
-    private View.OnClickListener onClickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Class<? extends Activity> toActivity;
-            switch (v.getId()) {
-                case R.id.to_grouping:
-                    toActivity = RecyclerViewGroupingActivity.class;
-                    break;
-                case R.id.to_tradecommon:
-                    toActivity = TradeCommonActivity.class;
-                    break;
-                case R.id.to_decoration:
-                    toActivity = DecorationActivity.class;
-                    break;
-                case R.id.to_trade_list:
-                    toActivity = TradeListMainActivity.class;
-                    break;
-                case R.id.to_edit:
-                    toActivity = RecyclerEditActivity.class;
-                    break;
-                default:
-                    toActivity = MainActivity.class;
-                    break;
-            }
-            startActivity(new Intent(v.getContext(), toActivity));
+    public void onClick(View v) {
+        Class<? extends Activity> toActivity;
+        switch (v.getId()) {
+            case R.id.to_grouping:
+                toActivity = RecyclerViewGroupingActivity.class;
+                break;
+            case R.id.to_tradecommon:
+                toActivity = TradeCommonActivity.class;
+                break;
+            case R.id.to_decoration:
+                toActivity = DecorationActivity.class;
+                break;
+            case R.id.to_trade_list:
+                toActivity = TradeListMainActivity.class;
+                break;
+            case R.id.to_edit:
+                toActivity = RecyclerEditActivity.class;
+                break;
+            default:
+                toActivity = MainActivity.class;
+                break;
         }
-    };
+        startActivity(new Intent(v.getContext(), toActivity));
+    }
 }

@@ -2,13 +2,14 @@ package com.example.practice.systemview.recyclerview.grouping;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.LinearSnapHelper;
 import android.support.v7.widget.RecyclerView;
 
 import com.example.practice.R;
 import com.example.practice.systemview.recyclerview.common.CommonRecyclerViewAdapter;
-import com.example.practice.systemview.recyclerview.common.CommonViewHoler;
+import com.example.practice.systemview.recyclerview.common.CommonViewHolder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,21 +37,11 @@ public class RecyclerViewGroupingActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new CommonRecyclerViewAdapter<String>(strings,R.layout.item_grouping) {
             @Override
-            public void convert(CommonViewHoler holder, String s) {
+            public void convert(CommonViewHolder holder, String s) {
                 holder.setText(R.id.item_grouping_text,s);
             }
         });
-        recyclerView.addItemDecoration(new GroupingDecoration(this, new GroupingDecoration.GroupingDecorationCallBack() {
-            @Override
-            public long getGroupId(int position) {
-                return 0;
-            }
-
-            @Override
-            public String getGroupFirstLine(int position) {
-                return "AA";
-            }
-        }));
+        recyclerView.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
         LinearSnapHelper linearSnapHelper=new LinearSnapHelper();
         linearSnapHelper.attachToRecyclerView(recyclerView);
     }

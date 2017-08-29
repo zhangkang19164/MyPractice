@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.example.practice.other.databinding.DataBindingMainActivity.Presenter" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            style="@style/button_style"
+            app:changeTextColor="@{@color/_FF3E30}"
+            android:onClick="@{presenter.toRecyclerView}"
+            android:text="RecyclerView使用" />
+
+        <Button
+            style="@style/button_style"
+            android:onClick="@{presenter.toTwoWay}"
+            android:text="双向绑定" />
+
+        <Button
+            style="@style/button_style"
+            android:onClick="@{presenter.toExpressionChain}"
+            android:text="表达式链" />
+
+        <Button
+            style="@style/button_style"
+            android:onClick="@{presenter.toLambda}"
+            android:text="Lambda表达式" />
+
+        <Button
+            style="@style/button_style"
+            android:onClick="@{presenter.toAnimation}"
+            android:text="动画" />
+
+        <Button
+            style="@style/button_style"
+            android:onClick="@{presenter.toCustomAttributes}"
+            android:text="自定义属性" />
+
+    </LinearLayout>
+</layout>

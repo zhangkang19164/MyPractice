@@ -8,7 +8,10 @@ import android.view.View;
 
 import com.example.practice.MainActivity;
 import com.example.practice.R;
+import com.example.practice.dependencies.annotations.AnnotationsActivity;
+import com.example.practice.dependencies.gson.GsonMainActivity;
 import com.example.practice.dependencies.lottie.SplashActivity;
+import com.example.practice.dependencies.rxjava.RxJavaMainActivity;
 import com.example.practice.dependencies.wheelview.WheelviewMainActivity;
 import com.example.practice.dependencies.xrecyclerview.XRecyclerViewActivity;
 
@@ -21,11 +24,9 @@ public class DependenciesMainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dependencies_main);
-        ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.to_lottie, R.id.to_wheelview,
-            R.id.to_x_recycler_view})
+
     public void onViewClicked(View view) {
         Class<? extends Activity> toActivity;
         switch (view.getId()) {
@@ -37,6 +38,15 @@ public class DependenciesMainActivity extends AppCompatActivity {
                 break;
             case R.id.to_x_recycler_view:
                 toActivity = XRecyclerViewActivity.class;
+                break;
+            case R.id.to_gson:
+                toActivity = GsonMainActivity.class;
+                break;
+            case R.id.to_annotations:
+                toActivity = AnnotationsActivity.class;
+                break;
+            case R.id.to_rx_java:
+                toActivity = RxJavaMainActivity.class;
                 break;
             default:
                 toActivity = MainActivity.class;

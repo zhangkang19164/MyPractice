@@ -9,7 +9,6 @@
     <declare-styleable name="MyExpandableListView">
         <attr name="isShowChildDivider" format="boolean" />
     </declare-styleable>
-
     <declare-styleable name="MyTextView">
         <attr name="time" format="string" />
         <attr name="time_num" format="string">
@@ -17,5 +16,4 @@
             <enum name="two" value="2" />
         </attr>
     </declare-styleable>
-
 </resources>

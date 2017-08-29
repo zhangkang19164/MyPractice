@@ -49,6 +49,10 @@
             android:id="@+id/to_spinner"
             style="@style/button_style"
             android:text="Spinner" />
+        <Button
+            android:id="@+id/to_edittext"
+            style="@style/button_style"
+            android:text="EditText" />
 
     </android.support.v7.widget.LinearLayoutCompat>
 

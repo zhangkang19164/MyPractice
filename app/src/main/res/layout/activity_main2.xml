@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/text_view"
+    <com.example.practice.systemview.edittext.MyEditText
+        android:id="@+id/edit_text"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</ScrollView>
+        android:layout_height="300dp"
+        android:gravity="top"
+        android:hint="输入你想写的东西"
+        android:padding="15dp"
+        android:imeOptions="actionSend"
+        android:scrollHorizontally="false"
+        android:inputType="textMultiLine"
+        />
+</LinearLayout>

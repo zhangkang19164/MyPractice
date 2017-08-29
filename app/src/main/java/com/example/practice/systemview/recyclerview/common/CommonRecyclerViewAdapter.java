@@ -11,7 +11,7 @@ import java.util.List;
  * 自定义 RecyclerView Adapter
  */
 
-public abstract class CommonRecyclerViewAdapter<T> extends RecyclerView.Adapter<CommonViewHoler> {
+public abstract class CommonRecyclerViewAdapter<T> extends RecyclerView.Adapter<CommonViewHolder> {
 	protected List<T> list;
 	private int layoutId;
 	private OnItemClickListener<T> onItemClickListener;
@@ -81,9 +81,9 @@ public abstract class CommonRecyclerViewAdapter<T> extends RecyclerView.Adapter<
 	}
 
 	@Override
-	public CommonViewHoler onCreateViewHolder(ViewGroup parent, int viewType) {
+	public CommonViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 		View view = LayoutInflater.from(parent.getContext()).inflate(layoutId, parent, false);
-		return new CommonViewHoler(view);
+		return new CommonViewHolder(view);
 	}
 
 	@Override
@@ -92,7 +92,7 @@ public abstract class CommonRecyclerViewAdapter<T> extends RecyclerView.Adapter<
 	}
 
 	@Override
-	public void onBindViewHolder(CommonViewHoler holder, final int position) {
+	public void onBindViewHolder(CommonViewHolder holder, final int position) {
 		holder.itemView.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -113,7 +113,7 @@ public abstract class CommonRecyclerViewAdapter<T> extends RecyclerView.Adapter<
 		convert(holder, list.get(position));
 	}
 
-	public abstract void convert(CommonViewHoler holder, T t);
+	public abstract void convert(CommonViewHolder holder, T t);
 
 	public void setOnItemClickListener(OnItemClickListener<T> onItemClickListener) {
 		this.onItemClickListener = onItemClickListener;

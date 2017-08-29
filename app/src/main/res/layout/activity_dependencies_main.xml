@@ -13,17 +13,36 @@
         <Button
             android:id="@+id/to_lottie"
             style="@style/button_style"
+            android:onClick="onViewClicked"
             android:text="Lottie库使用" />
 
         <Button
             android:id="@+id/to_wheelview"
             style="@style/button_style"
+            android:onClick="onViewClicked"
             android:text="Wheelview库使用" />
 
         <Button
             android:id="@+id/to_x_recycler_view"
             style="@style/button_style"
+            android:onClick="onViewClicked"
             android:text="XRecyclerView库使用" />
+
+        <Button
+            android:id="@+id/to_gson"
+            style="@style/button_style"
+            android:onClick="onViewClicked"
+            android:text="Gson使用" />
+        <Button
+            android:id="@+id/to_annotations"
+            style="@style/button_style"
+            android:onClick="onViewClicked"
+            android:text="Annotations使用" />
+        <Button
+            android:id="@+id/to_rx_java"
+            style="@style/button_style"
+            android:onClick="onViewClicked"
+            android:text="RxJava使用" />
     </android.support.v7.widget.LinearLayoutCompat>
 
 </ScrollView>

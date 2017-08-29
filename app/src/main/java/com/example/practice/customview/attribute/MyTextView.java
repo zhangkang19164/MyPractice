@@ -5,12 +5,18 @@ import android.content.res.TypedArray;
 import android.os.Build;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
+import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.TextView;
 
 import com.example.practice.R;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
 
 /**
  * author : Android_张康
@@ -20,7 +26,7 @@ import com.example.practice.R;
  * version: 1.0
  */
 
-public class MyTextView extends View {
+public class MyTextView extends AppCompatTextView {
 
 
     private static final String TAG = "MyTextView";
@@ -41,5 +47,39 @@ public class MyTextView extends View {
         String timeNum = typedArray.getString(R.styleable.MyTextView_time_num);
         Log.i(TAG, "MyTextView: timeNum = " + timeNum);
         typedArray.recycle();
+
+        ArrayList<Integer> arrayList=new ArrayList<>();
+
+        Iterator<Integer> iterator = arrayList.iterator();
+
+        if(iterator.hasNext()){
+           Integer i=iterator.next();
+        }
+        for(Integer i:arrayList){
+
+        }
+    }
+
+
+    public float px2sp(Context context, int unit, float value) {
+        return TypedValue.applyDimension(unit, value, context.getResources().getDisplayMetrics());
+    }
+
+    public float px2sp(Context context, float value) {
+        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, value, context.getResources().getDisplayMetrics());
+    }
+
+    public int dp2px(Context context, float value) {
+        // Get the screen's density scale
+        final float scale = context.getResources().getDisplayMetrics().density;
+        // Convert the dps to pixels, based on density scale
+        return (int) (value * scale + 0.5f);
+    }
+
+    public int px2dp(Context context, int value) {
+        // Get the screen's density scale
+        final float scale = context.getResources().getDisplayMetrics().density;
+        // Convert the dps to pixels, based on density scale
+        return (int) (value / scale + 0.5f);
     }
 }

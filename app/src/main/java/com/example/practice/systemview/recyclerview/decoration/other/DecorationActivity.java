@@ -9,7 +9,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.example.practice.R;
 import com.example.practice.systemview.recyclerview.common.CommonRecyclerViewAdapter;
-import com.example.practice.systemview.recyclerview.common.CommonViewHoler;
+import com.example.practice.systemview.recyclerview.common.CommonViewHolder;
 import com.example.practice.systemview.recyclerview.decoration.decoration.SampleOnDrawOverItemDecoration;
 
 import java.util.ArrayList;
@@ -39,7 +39,7 @@ public class DecorationActivity extends AppCompatActivity {
 		recyclerView.setLayoutManager(new GridLayoutManager(this, 3));
 		CommonRecyclerViewAdapter<String> recyclerViewAdapter = new CommonRecyclerViewAdapter<String>(stringList, R.layout.decoration_item) {
 			@Override
-			public void convert(CommonViewHoler holder, String s) {
+			public void convert(CommonViewHolder holder, String s) {
 				holder.setText(R.id.decoration_item_text, s);
 			}
 		};

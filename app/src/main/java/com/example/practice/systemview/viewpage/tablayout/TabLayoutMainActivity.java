@@ -2,6 +2,7 @@ package com.example.practice.systemview.viewpage.tablayout;
 
 import android.app.Activity;
 import android.content.res.Resources;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.content.ContextCompat;
@@ -30,8 +31,8 @@ public class TabLayoutMainActivity extends Activity {
     @BindView(R.id.tablayout_viewpage)
     ViewPager tablayoutViewpage;
 
-    //    private String[] tabs = new String[]{"沪深", "板块", "沪港通", "深港通", "港股", "环球", "更多",};
-    private String[] tabs = new String[]{"沪深", "板块",};
+    private String[] tabs = new String[]{"沪深", "板块", "沪港通", "深港通", "港股", "环球", "更多",};
+    //    private String[] tabs = new String[]{"沪深", "板块",};
     private List<View> views = new ArrayList<>();
 
     @Override
@@ -53,11 +54,40 @@ public class TabLayoutMainActivity extends Activity {
             views.add(t);
         }
         tablayoutViewpage.setAdapter(pagerAdapter);
+
         //设置显示方式
         tablayoutTablayout.setTabMode(TabLayout.MODE_SCROLLABLE);
+
+        tablayoutTablayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                View view = tab.getCustomView();
+                if (null == view) {
+                    tab.setCustomView(R.layout.custom_tab_layout_text);
+                }
+                TextView textView = (TextView) tab.getCustomView().findViewById(android.R.id.text1);
+                textView.setTextColor(tablayoutTablayout.getTabTextColors());
+                textView.setTypeface(Typeface.DEFAULT_BOLD);
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                View view = tab.getCustomView();
+                if (null == view) {
+                    tab.setCustomView(R.layout.custom_tab_layout_text);
+                }
+                TextView textView = (TextView) tab.getCustomView().findViewById(android.R.id.text1);
+                textView.setTypeface(Typeface.DEFAULT);
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
         //和ViewPager关联
         tablayoutTablayout.setupWithViewPager(tablayoutViewpage);
-        setIndicator(tablayoutTablayout, 40, 40);
+//        setIndicator(tablayoutTablayout, 40, 40);
     }
 
     private PagerAdapter pagerAdapter = new PagerAdapter() {

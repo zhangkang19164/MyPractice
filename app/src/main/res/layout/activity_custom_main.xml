@@ -9,20 +9,34 @@
     <Button
         android:id="@+id/to_LinearLayoutCompat"
         style="@style/button_style"
+        android:onClick="onViewClicked"
         android:text="自定义LinearLayoutCompat" />
 
     <Button
         android:id="@+id/to_detail"
         style="@style/button_style"
+        android:onClick="onViewClicked"
         android:text="详情页弹框" />
 
     <Button
         android:id="@+id/to_attribute"
         style="@style/button_style"
+        android:onClick="onViewClicked"
         android:text="自定义属性" />
 
     <Button
         android:id="@+id/to_picker"
         style="@style/button_style"
+        android:onClick="onViewClicked"
         android:text="选择器" />
+    <Button
+        android:id="@+id/to_custom"
+        style="@style/button_style"
+        android:onClick="onViewClicked"
+        android:text="自定义View" />
+    <Button
+        android:id="@+id/to_custom_calendar"
+        style="@style/button_style"
+        android:onClick="onViewClicked"
+        android:text="自定义日历控件" />
 </LinearLayout>

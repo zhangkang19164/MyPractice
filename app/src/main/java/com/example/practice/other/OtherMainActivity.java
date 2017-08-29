@@ -8,12 +8,11 @@ import android.view.View;
 
 import com.example.practice.MainActivity;
 import com.example.practice.R;
-import com.example.practice.customview.CustomMainActivity;
-import com.example.practice.dependencies.DependenciesMainActivity;
-import com.example.practice.designpattern.DesignPatternMainActivity;
 import com.example.practice.other.bezier.BezierMainActivity;
+import com.example.practice.other.changetextsize.ChangeTextSizeActivity;
+import com.example.practice.other.databinding.DataBindingMainActivity;
 import com.example.practice.other.loadconfig.LoadConfigMainActivity;
-import com.example.practice.systemview.SystemViewMainActivity;
+import com.example.practice.other.readfile.ReadFileMainActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -28,7 +27,10 @@ public class OtherMainActivity extends AppCompatActivity {
     }
 
 
-    @OnClick({R.id.to_load_config,R.id.to_bezier
+    @OnClick({R.id.to_load_config, R.id.to_bezier,
+            R.id.to_change_text_size, R.id.to_read_file,
+            R.id.to_mvvm
+
     })
     public void onViewClicked(View view) {
         Class<? extends Activity> toActivity;
@@ -38,6 +40,15 @@ public class OtherMainActivity extends AppCompatActivity {
                 break;
             case R.id.to_bezier:
                 toActivity = BezierMainActivity.class;
+                break;
+            case R.id.to_change_text_size:
+                toActivity = ChangeTextSizeActivity.class;
+                break;
+            case R.id.to_read_file:
+                toActivity = ReadFileMainActivity.class;
+                break;
+            case R.id.to_mvvm:
+                toActivity = DataBindingMainActivity.class;
                 break;
             default:
                 toActivity = MainActivity.class;
