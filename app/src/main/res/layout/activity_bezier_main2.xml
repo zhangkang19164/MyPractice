@@ -8,5 +8,5 @@
         android:id="@+id/to_bezier_circle"
         style="@style/button_style"
         android:onClick="onViewClick"
-        android:text="贝塞尔圆" />
+        android:text="贝塞尔指示器" />
 </LinearLayout>

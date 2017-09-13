@@ -36,12 +36,13 @@
         <activity android:name=".systemview.dialog.system.SystemDialogActivity" />
         <activity android:name=".systemview.dialog.custom.CustomDialogActivity" />
         <activity android:name=".systemview.viewpage.ViewPageMainActivity" />
-        <activity android:name=".systemview.viewpage.indicator.ViewPageIndicatorMainActivity" />
         <activity
             android:name=".systemview.viewpage.tablayout.TabLayoutMainActivity"
             android:theme="@android:style/Theme.Black" />
         <activity android:name=".dependencies.lottie.LottieMainActivity" />
-        <activity android:name=".dependencies.lottie.SplashActivity" />
+        <activity
+            android:name=".dependencies.lottie.SplashActivity"
+            android:theme="@style/No_Title_Activity_Style" />
         <activity android:name=".systemview.popupwindow.PopupWindowMainActivity" />
         <activity android:name=".systemview.popupwindow.system.SystemPopupWindowActivity" />
         <activity android:name=".systemview.popupwindow.custom.CustomPopupWindowMainActivity" />
@@ -59,9 +60,6 @@
         <activity android:name=".dependencies.xrecyclerview.XRecyclerViewActivity" />
         <activity android:name=".systemview.textview.marquee.MarqueeMainActivity" />
         <activity android:name=".customview.custom.CustomActivity" />
-        <activity
-            android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings" />
         <activity android:name=".other.changetextsize.ChangeTextSizeActivity" />
         <activity android:name=".other.readfile.ReadFileMainActivity" />
         <activity android:name=".other.databinding.DataBindingMainActivity" />
@@ -77,7 +75,7 @@
         <activity android:name=".customview.xiaomiweather.XiaoMiWeatherActivity" />
         <activity android:name=".systemview.recyclerview.drag.DragRecyclerViewActivity" />
         <activity android:name=".customview.bezier.BezierMainActivity" />
-        <activity android:name=".customview.bezier.circle.BezierCircleActivity"/>
+        <activity android:name=".customview.bezier.circle.BezierCircleActivity" />
     </application>
 
 </manifest>

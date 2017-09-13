@@ -13,12 +13,14 @@
             android:id="@+id/to_system_dialog"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:onClick="onViewClicked"
             android:text="系统的" />
 
         <Button
             android:id="@+id/to_custom_dialog"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:onClick="onViewClicked"
             android:text="自定义的" />
 
     </LinearLayout>

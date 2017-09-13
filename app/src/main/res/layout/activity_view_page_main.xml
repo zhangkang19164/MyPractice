@@ -7,11 +7,6 @@
     tools:context=".systemview.viewpage.ViewPageMainActivity">
 
     <Button
-        android:id="@+id/to_indicator"
-        style="@style/button_style"
-        android:text="指示器" />
-
-    <Button
         android:id="@+id/to_tablayout"
         style="@style/button_style"
         android:text="TabLayout" />

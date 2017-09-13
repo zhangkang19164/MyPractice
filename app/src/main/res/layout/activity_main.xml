@@ -14,10 +14,6 @@
         android:orientation="vertical">
 
 
-        <Button
-            style="@style/button_style"
-            android:onClick="showSnackBar"
-            android:text="测试SnackBar" />
 
         <Button
             android:id="@+id/to_system_view"
@@ -38,21 +34,10 @@
             android:text="自定义View相关" />
 
         <Button
-            style="@style/button_style"
-            android:onClick="onViewClicked"
-            android:text="框架" />
-
-        <Button
             android:id="@+id/to_other"
             style="@style/button_style"
             android:onClick="onViewClicked"
             android:text="其他的" />
-
-        <Button
-            android:id="@+id/to_setting"
-            style="@style/button_style"
-            android:onClick="onViewClicked"
-            android:text="设置页面" />
 
 
     </android.support.v7.widget.LinearLayoutCompat>

@@ -2,13 +2,12 @@ package com.example.practice.systemview.viewpage;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.example.practice.MainActivity;
 import com.example.practice.R;
-import com.example.practice.systemview.viewpage.indicator.ViewPageIndicatorMainActivity;
 import com.example.practice.systemview.viewpage.tablayout.TabLayoutMainActivity;
 
 public class ViewPageMainActivity extends AppCompatActivity {
@@ -26,9 +25,6 @@ public class ViewPageMainActivity extends AppCompatActivity {
         public void onClick(View v) {
             Class<? extends Activity> toActivity;
             switch (v.getId()) {
-                case R.id.to_indicator:
-                    toActivity = ViewPageIndicatorMainActivity.class;
-                    break;
                 case R.id.to_tablayout:
                     toActivity = TabLayoutMainActivity.class;
                     break;

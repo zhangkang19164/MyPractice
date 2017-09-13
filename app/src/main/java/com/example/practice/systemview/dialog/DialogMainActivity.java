@@ -18,20 +18,14 @@ import butterknife.OnClick;
 
 public class DialogMainActivity extends AppCompatActivity {
 
-    @BindView(R.id.to_system_dialog)
-    Button toSystemDialog;
-    @BindView(R.id.to_custom_dialog)
-    Button toCustomDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dialog_main);
-        ButterKnife.bind(this);
     }
 
 
-    @OnClick({R.id.to_system_dialog, R.id.to_custom_dialog})
     public void onViewClicked(View view) {
         Class<? extends Activity> toActivity;
         switch (view.getId()) {
@@ -41,7 +35,6 @@ public class DialogMainActivity extends AppCompatActivity {
             case R.id.to_custom_dialog:
                 toActivity = CustomDialogActivity.class;
                 break;
-
             default:
                 toActivity = MainActivity.class;
                 break;
