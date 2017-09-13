@@ -16,7 +16,6 @@ public class ViewPageMainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_page_main);
-        findViewById(R.id.to_indicator).setOnClickListener(onClickListener);
         findViewById(R.id.to_tablayout).setOnClickListener(onClickListener);
     }
 
