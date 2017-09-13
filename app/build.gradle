@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.jakewharton.butterknife'
 
 android {
-    compileSdkVersion 'android-O'
+    compileSdkVersion 25
     buildToolsVersion "25.0.3"
     defaultConfig {
         applicationId "com.example.practice"
@@ -44,6 +44,7 @@ dependencies {
     //Gson converter
     //RxJava2 Adapter
     //okhttp
+    compile project(':common')
     compile 'com.android.support.constraint:constraint-layout:1.0.0-beta5'
     compile 'in.srain.cube:ultra-ptr:1.0.11'
     compile 'com.jakewharton:butterknife:8.5.1'
@@ -64,4 +65,20 @@ dependencies {
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0'
+}
+
+def createFile = {
+    v ->
+        File file = new File(v)
+        if (!file.exists()) {
+            file.mkdirs()
+        }
+}
+
+task makeResDarwable {
+    def paths = ['app/src/main/res/drawable-hdpi', 'app/src/main/res/drawable-xhdpi', 'app/src/main/res/drawable-xxhdpi', 'app/src/main/res/drawable-mdpi', 'app/src/main/res/drawable-xxxhdpi']
+
+    doFirst {
+        paths.forEach(createFile)
+    }
 }

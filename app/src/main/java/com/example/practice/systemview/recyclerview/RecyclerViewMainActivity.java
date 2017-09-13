@@ -9,6 +9,7 @@ import android.view.View;
 import com.example.practice.MainActivity;
 import com.example.practice.R;
 import com.example.practice.systemview.recyclerview.decoration.other.DecorationActivity;
+import com.example.practice.systemview.recyclerview.drag.DragRecyclerViewActivity;
 import com.example.practice.systemview.recyclerview.edit.RecyclerEditActivity;
 import com.example.practice.systemview.recyclerview.grouping.RecyclerViewGroupingActivity;
 import com.example.practice.systemview.recyclerview.tradecommon.activity.TradeCommonActivity;
@@ -39,6 +40,9 @@ public class RecyclerViewMainActivity extends AppCompatActivity {
                 break;
             case R.id.to_edit:
                 toActivity = RecyclerEditActivity.class;
+                break;
+            case R.id.to_drag:
+                toActivity = DragRecyclerViewActivity.class;
                 break;
             default:
                 toActivity = MainActivity.class;

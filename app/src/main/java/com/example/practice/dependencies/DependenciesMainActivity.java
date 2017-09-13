@@ -2,21 +2,16 @@ package com.example.practice.dependencies;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.example.practice.MainActivity;
 import com.example.practice.R;
-import com.example.practice.dependencies.annotations.AnnotationsActivity;
-import com.example.practice.dependencies.gson.GsonMainActivity;
 import com.example.practice.dependencies.lottie.SplashActivity;
 import com.example.practice.dependencies.rxjava.RxJavaMainActivity;
 import com.example.practice.dependencies.wheelview.WheelviewMainActivity;
 import com.example.practice.dependencies.xrecyclerview.XRecyclerViewActivity;
-
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 public class DependenciesMainActivity extends AppCompatActivity {
 
@@ -39,12 +34,7 @@ public class DependenciesMainActivity extends AppCompatActivity {
             case R.id.to_x_recycler_view:
                 toActivity = XRecyclerViewActivity.class;
                 break;
-            case R.id.to_gson:
-                toActivity = GsonMainActivity.class;
-                break;
-            case R.id.to_annotations:
-                toActivity = AnnotationsActivity.class;
-                break;
+
             case R.id.to_rx_java:
                 toActivity = RxJavaMainActivity.class;
                 break;

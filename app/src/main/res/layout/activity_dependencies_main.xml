@@ -29,16 +29,6 @@
             android:text="XRecyclerView库使用" />
 
         <Button
-            android:id="@+id/to_gson"
-            style="@style/button_style"
-            android:onClick="onViewClicked"
-            android:text="Gson使用" />
-        <Button
-            android:id="@+id/to_annotations"
-            style="@style/button_style"
-            android:onClick="onViewClicked"
-            android:text="Annotations使用" />
-        <Button
             android:id="@+id/to_rx_java"
             style="@style/button_style"
             android:onClick="onViewClicked"

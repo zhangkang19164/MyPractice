@@ -1,1 +1,1 @@
-include ':app', ':lib', ':networkrequest'
+include ':app', ':lib', ':networkrequest', ':common'

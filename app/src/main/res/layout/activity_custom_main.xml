@@ -13,30 +13,36 @@
         android:text="自定义LinearLayoutCompat" />
 
     <Button
-        android:id="@+id/to_detail"
-        style="@style/button_style"
-        android:onClick="onViewClicked"
-        android:text="详情页弹框" />
-
-    <Button
-        android:id="@+id/to_attribute"
-        style="@style/button_style"
-        android:onClick="onViewClicked"
-        android:text="自定义属性" />
-
-    <Button
         android:id="@+id/to_picker"
         style="@style/button_style"
         android:onClick="onViewClicked"
         android:text="选择器" />
+
     <Button
         android:id="@+id/to_custom"
         style="@style/button_style"
         android:onClick="onViewClicked"
         android:text="自定义View" />
+
     <Button
         android:id="@+id/to_custom_calendar"
         style="@style/button_style"
         android:onClick="onViewClicked"
         android:text="自定义日历控件" />
+
+    <Button
+        android:id="@+id/to_sliding_menu_recycler"
+        style="@style/button_style"
+        android:onClick="onViewClicked"
+        android:text="RecyclerView侧滑菜单" />
+    <Button
+        android:id="@+id/to_xiaomi_weather"
+        style="@style/button_style"
+        android:onClick="onViewClicked"
+        android:text="仿小米天气" />
+    <Button
+        android:id="@+id/to_bezier"
+        style="@style/button_style"
+        android:onClick="onViewClicked"
+        android:text="贝塞尔相关" />
 </LinearLayout>

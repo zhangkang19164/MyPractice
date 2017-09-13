@@ -31,16 +31,12 @@
         <activity android:name=".systemview.expandablelistview.type.ExpandableListViewTypeActivity" />
         <activity android:name=".customview.CustomMainActivity" />
         <activity android:name=".customview.linearlayoutcompat.LinearLayoutCompatMainActivity" />
-        <activity android:name=".designpattern.refresh.RefreshMainActivity" />
-        <activity android:name=".designpattern.refresh.frame.RefresFrameActivity" />
-        <activity android:name=".designpattern.DesignPatternMainActivity" />
         <activity android:name=".systemview.dialog.DialogMainActivity" />
         <activity android:name=".systemview.dialog.system.PickerActivity" />
         <activity android:name=".systemview.dialog.system.SystemDialogActivity" />
         <activity android:name=".systemview.dialog.custom.CustomDialogActivity" />
         <activity android:name=".systemview.viewpage.ViewPageMainActivity" />
         <activity android:name=".systemview.viewpage.indicator.ViewPageIndicatorMainActivity" />
-        <activity android:name=".customview.attribute.CustomAttributeMainActivity" />
         <activity
             android:name=".systemview.viewpage.tablayout.TabLayoutMainActivity"
             android:theme="@android:style/Theme.Black" />
@@ -49,7 +45,6 @@
         <activity android:name=".systemview.popupwindow.PopupWindowMainActivity" />
         <activity android:name=".systemview.popupwindow.system.SystemPopupWindowActivity" />
         <activity android:name=".systemview.popupwindow.custom.CustomPopupWindowMainActivity" />
-        <activity android:name=".customview.detail.DetailMainActivity" />
         <activity android:name=".systemview.SystemViewMainActivity" />
         <activity android:name=".dependencies.DependenciesMainActivity" />
         <activity android:name=".systemview.spinner.SpinnerMainActivity" />
@@ -57,7 +52,6 @@
         <activity android:name=".other.OtherMainActivity" />
         <activity android:name=".other.loadconfig.LoadConfigMainActivity" />
         <activity android:name=".systemview.recyclerview.tradelist.TradeListMainActivity" />
-        <activity android:name=".other.bezier.BezierMainActivity" />
         <activity android:name=".dependencies.wheelview.WheelviewMainActivity" />
         <activity android:name=".systemview.listview.empty.EmptyMainActivity" />
         <activity android:name=".systemview.recyclerview.edit.RecyclerEditActivity" />
@@ -69,7 +63,6 @@
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" />
         <activity android:name=".other.changetextsize.ChangeTextSizeActivity" />
-        <activity android:name=".dependencies.gson.GsonMainActivity" />
         <activity android:name=".other.readfile.ReadFileMainActivity" />
         <activity android:name=".other.databinding.DataBindingMainActivity" />
         <activity android:name=".other.databinding.recyclerview.MVVMOfRecyclerViewActivity" />
@@ -78,9 +71,13 @@
         <activity android:name=".other.databinding.lambda.LambdaActivity" />
         <activity android:name=".other.databinding.animation.AnimationActivity" />
         <activity android:name=".other.databinding.customattributes.CustomAttributesActivity" />
-        <activity android:name=".dependencies.annotations.AnnotationsActivity" />
         <activity android:name=".dependencies.rxjava.RxJavaMainActivity" />
-        <activity android:name=".customview.calendar.CalendarActivity"></activity>
+        <activity android:name=".customview.calendar.CalendarActivity" />
+        <activity android:name=".customview.slidingmenu.SlidingMenuActivity" />
+        <activity android:name=".customview.xiaomiweather.XiaoMiWeatherActivity" />
+        <activity android:name=".systemview.recyclerview.drag.DragRecyclerViewActivity" />
+        <activity android:name=".customview.bezier.BezierMainActivity" />
+        <activity android:name=".customview.bezier.circle.BezierCircleActivity"/>
     </application>
 
 </manifest>

@@ -8,15 +8,12 @@ import android.view.View;
 
 import com.example.practice.MainActivity;
 import com.example.practice.R;
-import com.example.practice.customview.attribute.CustomAttributeMainActivity;
+import com.example.practice.customview.bezier.BezierMainActivity;
 import com.example.practice.customview.calendar.CalendarActivity;
-import com.example.practice.customview.custom.CustomActivity;
-import com.example.practice.customview.detail.DetailMainActivity;
 import com.example.practice.customview.linearlayoutcompat.LinearLayoutCompatMainActivity;
 import com.example.practice.customview.picker.PickerMainActivity;
-
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+import com.example.practice.customview.slidingmenu.SlidingMenuActivity;
+import com.example.practice.customview.xiaomiweather.XiaoMiWeatherActivity;
 
 public class CustomMainActivity extends AppCompatActivity {
 
@@ -33,12 +30,7 @@ public class CustomMainActivity extends AppCompatActivity {
             case R.id.to_LinearLayoutCompat:
                 toActivity = LinearLayoutCompatMainActivity.class;
                 break;
-            case R.id.to_detail:
-                toActivity = DetailMainActivity.class;
-                break;
-            case R.id.to_attribute:
-                toActivity = CustomAttributeMainActivity.class;
-                break;
+
             case R.id.to_picker:
                 toActivity = PickerMainActivity.class;
                 break;
@@ -47,6 +39,15 @@ public class CustomMainActivity extends AppCompatActivity {
                 break;
             case R.id.to_custom_calendar:
                 toActivity = CalendarActivity.class;
+                break;
+            case R.id.to_sliding_menu_recycler:
+                toActivity = SlidingMenuActivity.class;
+                break;
+            case R.id.to_xiaomi_weather:
+                toActivity = XiaoMiWeatherActivity.class;
+                break;
+            case R.id.to_bezier:
+                toActivity = BezierMainActivity.class;
                 break;
             default:
                 toActivity = MainActivity.class;

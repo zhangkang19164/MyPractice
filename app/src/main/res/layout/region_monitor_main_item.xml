@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/testshangla"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/_F8F8F8"
@@ -18,21 +17,18 @@
         app:showDividers="middle">
 
         <include
-            android:id="@+id/region_monitor_main_item_00"
             layout="@layout/quote_block_item"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
         <include
-            android:id="@+id/region_monitor_main_item_01"
             layout="@layout/quote_block_item"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
         <include
-            android:id="@+id/region_monitor_main_item_02"
             layout="@layout/quote_block_item"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -46,21 +42,18 @@
         app:showDividers="middle">
 
         <include
-            android:id="@+id/region_monitor_main_item_03"
             layout="@layout/quote_block_item"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
         <include
-            android:id="@+id/region_monitor_main_item_04"
             layout="@layout/quote_block_item"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
         <include
-            android:id="@+id/region_monitor_main_item_05"
             layout="@layout/quote_block_item"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

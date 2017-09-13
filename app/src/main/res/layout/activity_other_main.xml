@@ -13,22 +13,23 @@
         <Button
             android:id="@+id/to_load_config"
             style="@style/button_style"
+            android:onClick="onViewClicked"
             android:text="加载配置项" />
-        <Button
-            android:id="@+id/to_bezier"
-            style="@style/button_style"
-            android:text="贝塞尔曲线" />
+
         <Button
             android:id="@+id/to_change_text_size"
             style="@style/button_style"
+            android:onClick="onViewClicked"
             android:text="修改系统字体大小" />
         <Button
             android:id="@+id/to_read_file"
             style="@style/button_style"
+            android:onClick="onViewClicked"
             android:text="读取文件" />
         <Button
             android:id="@+id/to_mvvm"
             style="@style/button_style"
+            android:onClick="onViewClicked"
             android:text="MVVM" />
     </android.support.v7.widget.LinearLayoutCompat>
 
