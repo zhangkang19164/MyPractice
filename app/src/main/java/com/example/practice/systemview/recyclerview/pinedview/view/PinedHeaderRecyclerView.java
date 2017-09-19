@@ -1,4 +1,4 @@
-package com.example.practice.systemview.recyclerview.pinedview;
+package com.example.practice.systemview.recyclerview.pinedview.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -15,19 +15,17 @@ import android.view.ViewGroup;
  * desc        :
  */
 
-public class PinedHeaderRecyclerView extends RecyclerView{
+public class PinedHeaderRecyclerView extends RecyclerView {
     private PinedHeaderRecyclerView.PinedListener pinedListener;
     private View mHeaderView;
     private View mTouchTarget;
 
     public PinedHeaderRecyclerView(Context context) {
-        super(context);
-        this.initView();
+        this(context,null);
     }
 
     public PinedHeaderRecyclerView(Context context, @Nullable AttributeSet attrs) {
-        super(context, attrs);
-        this.initView();
+        this(context, attrs,0);
     }
 
     public PinedHeaderRecyclerView(Context context, @Nullable AttributeSet attrs, int defStyle) {
@@ -39,30 +37,33 @@ public class PinedHeaderRecyclerView extends RecyclerView{
         this.addOnScrollListener(new PinedHeaderRecyclerView.ScrollListener());
     }
 
+    @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        if(this.mHeaderView != null) {
+        if (this.mHeaderView != null) {
             this.measureChild(this.mHeaderView, widthMeasureSpec, heightMeasureSpec);
         }
     }
 
+    @Override
     protected void dispatchDraw(Canvas canvas) {
         super.dispatchDraw(canvas);
-        if(this.mHeaderView != null) {
+        if (this.mHeaderView != null) {
             this.drawChild(canvas, this.mHeaderView, this.getDrawingTime());
         }
 
     }
 
+    @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        int x = (int)ev.getX();
-        int y = (int)ev.getY();
-        if(this.mHeaderView != null && y >= this.mHeaderView.getTop() && y <= this.mHeaderView.getBottom()) {
-            if(ev.getAction() == 0) {
+        int x = (int) ev.getX();
+        int y = (int) ev.getY();
+        if (this.mHeaderView != null && y >= this.mHeaderView.getTop() && y <= this.mHeaderView.getBottom()) {
+            if (ev.getAction() == 0) {
                 this.mTouchTarget = this.getTouchTarget(this.mHeaderView, x, y);
-            } else if(ev.getAction() == 1) {
+            } else if (ev.getAction() == 1) {
                 View touchTarget = this.getTouchTarget(this.mHeaderView, x, y);
-                if(touchTarget == this.mTouchTarget && this.mTouchTarget.isClickable()) {
+                if (touchTarget == this.mTouchTarget && this.mTouchTarget.isClickable()) {
                     this.mTouchTarget.performClick();
                     this.refreshHeadView();
                 }
@@ -75,28 +76,28 @@ public class PinedHeaderRecyclerView extends RecyclerView{
     }
 
     private View getTouchTarget(View view, int x, int y) {
-        if(!(view instanceof ViewGroup)) {
+        if (!(view instanceof ViewGroup)) {
             return view;
         } else {
-            ViewGroup parent = (ViewGroup)view;
+            ViewGroup parent = (ViewGroup) view;
             int childrenCount = parent.getChildCount();
             boolean customOrder = this.isChildrenDrawingOrderEnabled();
             Object target = null;
 
-            for(int i = childrenCount - 1; i >= 0; --i) {
-                int childIndex = customOrder?this.getChildDrawingOrder(childrenCount, i):i;
+            for (int i = childrenCount - 1; i >= 0; --i) {
+                int childIndex = customOrder ? this.getChildDrawingOrder(childrenCount, i) : i;
                 View child = parent.getChildAt(childIndex);
-                if(this.isTouchPointInView(child, x, y)) {
+                if (this.isTouchPointInView(child, x, y)) {
                     target = child;
                     break;
                 }
             }
 
-            if(target == null) {
+            if (target == null) {
                 target = parent;
             }
 
-            return (View)target;
+            return (View) target;
         }
     }
 
@@ -105,13 +106,13 @@ public class PinedHeaderRecyclerView extends RecyclerView{
     }
 
     private void refreshHeadView() {
-        if(this.pinedListener != null) {
+        if (this.pinedListener != null) {
             int firstVisiblePos = this.getFirstVisiblePosition();
             this.mHeaderView.setVisibility(VISIBLE);
-            if(this.pinedListener.isHeader(firstVisiblePos)) {
+            if (this.pinedListener.isHeader(firstVisiblePos)) {
                 this.pinedListener.updateHeaderView(this.mHeaderView, firstVisiblePos);
             } else {
-                if(!this.pinedListener.isItem(firstVisiblePos)) {
+                if (!this.pinedListener.isItem(firstVisiblePos)) {
                     this.mHeaderView.layout(0, 0, 0, 0);
                     return;
                 }
@@ -120,13 +121,13 @@ public class PinedHeaderRecyclerView extends RecyclerView{
             }
 
             int nextGroupIndex = this.pinedListener.findLastHeaderIndex(firstVisiblePos + 1);
-            if(nextGroupIndex == firstVisiblePos + 1) {
+            if (nextGroupIndex == firstVisiblePos + 1) {
                 View view = this.getChildAt(1);
-                if(view == null) {
+                if (view == null) {
                     return;
                 }
 
-                if(view.getTop() <= this.mHeaderView.getMeasuredHeight()) {
+                if (view.getTop() <= this.mHeaderView.getMeasuredHeight()) {
                     int delta = this.mHeaderView.getMeasuredHeight() - view.getTop();
                     this.mHeaderView.layout(0, -delta, this.mHeaderView.getMeasuredWidth(), this.mHeaderView.getMeasuredHeight() - delta);
                 }
@@ -139,8 +140,8 @@ public class PinedHeaderRecyclerView extends RecyclerView{
 
     private int getFirstVisiblePosition() {
         RecyclerView.LayoutManager layoutManager = this.getLayoutManager();
-        if(layoutManager instanceof LinearLayoutManager) {
-            LinearLayoutManager linearManager = (LinearLayoutManager)layoutManager;
+        if (layoutManager instanceof LinearLayoutManager) {
+            LinearLayoutManager linearManager = (LinearLayoutManager) layoutManager;
             return linearManager.findFirstVisibleItemPosition();
         } else {
             return -1;
@@ -167,14 +168,14 @@ public class PinedHeaderRecyclerView extends RecyclerView{
     interface PinedListener {
         View getHeaderView();
 
-        void updateHeaderView(View var1, int var2);
+        void updateHeaderView(View headerView, int groupIndex);
 
-        boolean isHeader(int var1);
+        boolean isHeader(int position);
 
-        int findLastHeaderIndex(int var1);
+        int findLastHeaderIndex(int fromIndex);
 
-        boolean isItem(int var1);
+        boolean isItem(int position);
 
-        int findPreHeaderIndex(int var1);
+        int findPreHeaderIndex(int fromIndex);
     }
 }

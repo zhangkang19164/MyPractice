@@ -10,9 +10,9 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Xml;
 import android.view.View;
 
+import com.example.common.view.common.CommonRecyclerViewAdapter;
+import com.example.common.view.common.CommonViewHolder;
 import com.example.practice.R;
-import com.example.practice.systemview.recyclerview.common.CommonRecyclerViewAdapter;
-import com.example.practice.systemview.recyclerview.common.CommonViewHolder;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;

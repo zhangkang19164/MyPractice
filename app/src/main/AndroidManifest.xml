@@ -75,7 +75,10 @@
         <activity android:name=".customview.xiaomiweather.XiaoMiWeatherActivity" />
         <activity android:name=".systemview.recyclerview.drag.DragRecyclerViewActivity" />
         <activity android:name=".customview.bezier.BezierMainActivity" />
-        <activity android:name=".customview.bezier.circle.BezierCircleActivity" />
+        <activity android:name=".customview.bezier.indicator.BezierCircleActivity" />
+        <activity android:name=".systemview.recyclerview.pinedview.PinnedHeaderActivity" />
+        <activity android:name=".customview.bezier.round.BezierRoundActivity" />
+        <activity android:name=".customview.bezier.score.ScoreIndicatorActivity" />
     </application>
 
 </manifest>

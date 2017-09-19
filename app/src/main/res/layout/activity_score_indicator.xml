@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.example.practice.customview.bezier.score.view.ScoreIndicatorView
+        android:id="@+id/score_indicator_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F8F8F8"/>
+
+    <EditText
+        android:id="@+id/edit_text"
+        style="@style/button_style"
+        android:inputType="numberSigned"/>
+
+    <Button
+        style="@style/button_style"
+        android:onClick="onViewClick"
+        android:text="设置当前值" />
+</LinearLayout>

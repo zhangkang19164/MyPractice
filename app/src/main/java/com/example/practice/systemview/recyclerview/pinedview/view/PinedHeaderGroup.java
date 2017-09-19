@@ -1,8 +1,8 @@
-package com.example.practice.systemview.recyclerview.pinedview;
+package com.example.practice.systemview.recyclerview.pinedview.view;
 
 /**
  * create time : 2017/09/08
- * desc        :
+ * desc        : 头部继承该类
  */
 
 public interface PinedHeaderGroup {

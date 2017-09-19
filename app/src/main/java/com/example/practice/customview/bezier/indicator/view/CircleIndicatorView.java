@@ -1,4 +1,4 @@
-package com.example.practice.customview.bezier.circle.view;
+package com.example.practice.customview.bezier.indicator.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -6,6 +6,7 @@ import android.database.DataSetObserver;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.PointF;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
@@ -15,7 +16,6 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewParent;
 
-import com.example.common.tools.ViewTools;
 import com.example.practice.R;
 
 /**
@@ -30,9 +30,9 @@ public class CircleIndicatorView extends View {
     //View的宽度，用来判断页面是否加载完成，用来初始化位置信息
     private float viewWidth = -1;
     //用来储存5个绘制点的数组
-    private DotLocation[] dotLocations;
+    private PointF[] drawPointFs;
     //用来保存所有的指示器的圆心位置
-    private DotLocation[] indicators;
+    private PointF[] indicators;
     //指示器的半径
     private float indicatorRadius;
     //指示器的颜色
@@ -46,6 +46,8 @@ public class CircleIndicatorView extends View {
     private float indicatorDistance;
     //左右两边的边距
     private float leftAndRightDistance;
+
+    private float bottomHeight;
     //用来判断是否为隐式的和ViewPage产生关联，即在布局中关联
     private boolean mSetupViewPagerImplicitly;
 
@@ -68,11 +70,13 @@ public class CircleIndicatorView extends View {
 
     public CircleIndicatorView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
+        float density = context.getResources().getDisplayMetrics().density;
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.CircleIndicatorView);
-        indicatorRadius = typedArray.getDimension(R.styleable.CircleIndicatorView_indicator_radius, 4 * context.getResources().getDisplayMetrics().density);
+        indicatorRadius = typedArray.getDimension(R.styleable.CircleIndicatorView_indicator_radius, 4 * density);
         indicatorColor = typedArray.getColor(R.styleable.CircleIndicatorView_indicator_color, ContextCompat.getColor(context, android.R.color.holo_blue_dark));
-        indicatorDistance = typedArray.getDimension(R.styleable.CircleIndicatorView_indicator_distance, 25 * context.getResources().getDisplayMetrics().density);
+        indicatorDistance = typedArray.getDimension(R.styleable.CircleIndicatorView_indicator_distance, 25 * density);
         indicatorWidth = typedArray.getDimension(R.styleable.CircleIndicatorView_indicator_width, 2.0F);
+        bottomHeight = typedArray.getDimension(R.styleable.CircleIndicatorView_bottom_height, 30 * density);
         typedArray.recycle();
 
         Paint paint = mPaint;
@@ -88,17 +92,21 @@ public class CircleIndicatorView extends View {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         int heightMode = MeasureSpec.getMode(heightMeasureSpec);
         int heightSize = MeasureSpec.getSize(heightMeasureSpec);
+        int minHeight = (int) (bottomHeight + indicatorWidth * 2 + indicatorRadius * 2);
         switch (heightMode) {
             case MeasureSpec.AT_MOST:
-                heightSize = ViewTools.dp2Px(40F);
+                heightSize = minHeight;
                 break;
             case MeasureSpec.EXACTLY:
+                if (heightSize < minHeight) {
+                    heightSize = minHeight;
+                }
                 break;
             case MeasureSpec.UNSPECIFIED:
-                heightSize = ViewTools.dp2Px(40F);
+                heightSize = minHeight;
                 break;
-
         }
+
         setMeasuredDimension(MeasureSpec.getSize(widthMeasureSpec), heightSize);
     }
 
@@ -130,7 +138,7 @@ public class CircleIndicatorView extends View {
 
     //绘制指示圆
     private void drawIndicatorCircle(Canvas canvas) {
-        DotLocation[] indicators = this.indicators;
+        PointF[] indicators = this.indicators;
         Paint paint = mPaint;
         for (int i = 0; i < indicators.length; i++) {
             paint.setStyle(i == selectPosition ? Paint.Style.FILL_AND_STROKE : Paint.Style.STROKE);
@@ -156,12 +164,12 @@ public class CircleIndicatorView extends View {
         mPaint.setColor(paintColor);
         mPaint.setStyle(Paint.Style.FILL);
         Path path = mPath;
-        DotLocation[] dotLocations = this.dotLocations;
+        PointF[] drawPointFs = this.drawPointFs;
         path.reset();
-        path.moveTo(dotLocations[0].x, dotLocations[0].y);
-        path.quadTo(dotLocations[4].x, dotLocations[4].y, dotLocations[2].x, dotLocations[2].y);
-        path.lineTo(dotLocations[3].x, dotLocations[3].y);
-        path.quadTo(dotLocations[4].x, dotLocations[4].y, dotLocations[1].x, dotLocations[1].y);
+        path.moveTo(drawPointFs[0].x, drawPointFs[0].y);
+        path.quadTo(drawPointFs[4].x, drawPointFs[4].y, drawPointFs[2].x, drawPointFs[2].y);
+        path.lineTo(drawPointFs[3].x, drawPointFs[3].y);
+        path.quadTo(drawPointFs[4].x, drawPointFs[4].y, drawPointFs[1].x, drawPointFs[1].y);
         canvas.drawPath(path, mPaint);
     }
 
@@ -233,15 +241,17 @@ public class CircleIndicatorView extends View {
         if (viewWidth != -1 && null != mPagerAdapter) {
             indicatorCount = mPagerAdapter.getCount();
             leftAndRightDistance = (viewWidth - getPaddingLeft() - getPaddingRight() - indicatorDistance * (indicatorCount - 1)) / 2;
-            DotLocation[] indicators = this.indicators;
+            PointF[] indicators = this.indicators;
+            float height = (getHeight() - bottomHeight) / 2;
             if (null == indicators || indicatorCount > indicators.length) {
-                indicators = new DotLocation[indicatorCount];
+                indicators = new PointF[indicatorCount];
+
                 for (int i = 0; i < indicators.length; i++) {
-                    indicators[i] = new DotLocation(leftAndRightDistance + indicatorDistance * i, getHeight() / 2);
+                    indicators[i] = new PointF(leftAndRightDistance + indicatorDistance * i, height);
                 }
             } else {
                 for (int i = 0; i < indicatorCount; i++) {
-                    indicators[i].setXY(leftAndRightDistance + indicatorDistance * i, getHeight() / 2);
+                    indicators[i].set(leftAndRightDistance + indicatorDistance * i, height);
                 }
 
             }
@@ -257,11 +267,11 @@ public class CircleIndicatorView extends View {
     }
 
     private void dotLocations() {
-        if (null == dotLocations) {
-            dotLocations = new DotLocation[]{
-                    new DotLocation(0, 0), new DotLocation(0, 0), new DotLocation(0, 0),
-                    new DotLocation(0, 0), new DotLocation(0, 0), new DotLocation(0, 0),
-                    new DotLocation(0, 0),
+        if (null == drawPointFs) {
+            drawPointFs = new PointF[]{
+                    new PointF(0, 0), new PointF(0, 0), new PointF(0, 0),
+                    new PointF(0, 0), new PointF(0, 0), new PointF(0, 0),
+                    new PointF(0, 0),
             };
         }
     }
@@ -290,13 +300,13 @@ public class CircleIndicatorView extends View {
     //改变绘制点的位置信息
     private void changeLocation() {
         dotLocations();
-        DotLocation[] dotLocations = this.dotLocations;
-        DotLocation selectIndicator = this.indicators[selectPosition];
-        dotLocations[0].setXY(selectIndicator.x, selectIndicator.y - indicatorRadius);
-        dotLocations[1].setXY(selectIndicator.x, selectIndicator.y + indicatorRadius);
-        dotLocations[2].setXY(lastX, selectIndicator.y - indicatorRadius);
-        dotLocations[3].setXY(lastX, selectIndicator.y + indicatorRadius);
-        dotLocations[4].setXY(selectIndicator.x + (lastX - selectIndicator.x) / 2, selectIndicator.y);
+        PointF[] drawPointFs = this.drawPointFs;
+        PointF selectIndicator = this.indicators[selectPosition];
+        drawPointFs[0].set(selectIndicator.x, selectIndicator.y - indicatorRadius);
+        drawPointFs[1].set(selectIndicator.x, selectIndicator.y + indicatorRadius);
+        drawPointFs[2].set(lastX, selectIndicator.y - indicatorRadius);
+        drawPointFs[3].set(lastX, selectIndicator.y + indicatorRadius);
+        drawPointFs[4].set(selectIndicator.x + (lastX - selectIndicator.x) / 2, selectIndicator.y);
     }
 
     //用来监听ViewPage的Adapter数据发生变化
@@ -348,23 +358,6 @@ public class CircleIndicatorView extends View {
         }
     }
 
-    //点的位置信息
-    private static class DotLocation {
-
-        float x;
-        float y;
-
-        DotLocation(float x, float y) {
-            this.x = x;
-            this.y = y;
-        }
-
-        void setXY(float x, float y) {
-            this.x = x;
-            this.y = y;
-        }
-    }
-
     private class DefaultOnSelectIndicatorColor implements OnSelectIndicatorColor {
 
         @Override
@@ -373,7 +366,9 @@ public class CircleIndicatorView extends View {
         }
     }
 
-
+    /**
+     * 如果指示圆需要不同的颜色，实现这个接口 根据position返回颜色即可
+     */
     public interface OnSelectIndicatorColor {
         int getSelectIndicatorColor(int position);
     }

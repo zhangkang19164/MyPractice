@@ -1,16 +1,13 @@
 package com.example.practice.customview.slidingmenu;
 
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 
 import com.example.practice.R;
 import com.example.practice.databinding.ActivitySlidingMenuBinding;
-import com.example.practice.systemview.recyclerview.common.CommonRecyclerViewAdapter;
-import com.example.practice.systemview.recyclerview.common.CommonViewHolder;
 
 import java.util.ArrayList;
 import java.util.List;

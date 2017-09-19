@@ -1,5 +1,10 @@
 package com.example;
 
+import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
@@ -9,7 +14,8 @@ import io.reactivex.disposables.Disposable;
 public class MyClass {
 
     public static void main(String args[]) {
-        test2();
+        DecimalFormat decimalFormat=new DecimalFormat("#.0");
+        System.out.println(decimalFormat.format(3.144));
     }
 
     private static void test() {

@@ -9,4 +9,14 @@
         style="@style/button_style"
         android:onClick="onViewClick"
         android:text="贝塞尔指示器" />
+    <Button
+        android:id="@+id/to_bezier_round"
+        style="@style/button_style"
+        android:onClick="onViewClick"
+        android:text="圆弧" />
+    <Button
+        android:id="@+id/to_bezier_score"
+        style="@style/button_style"
+        android:onClick="onViewClick"
+        android:text="指示圆环" />
 </LinearLayout>

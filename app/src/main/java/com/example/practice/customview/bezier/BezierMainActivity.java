@@ -7,14 +7,16 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.practice.R;
-import com.example.practice.customview.bezier.circle.BezierCircleActivity;
+import com.example.practice.customview.bezier.indicator.BezierCircleActivity;
+import com.example.practice.customview.bezier.round.BezierRoundActivity;
+import com.example.practice.customview.bezier.score.ScoreIndicatorActivity;
 
 public class BezierMainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bezier_main2);
+        setContentView(R.layout.activity_bezier_main);
     }
 
     public void onViewClick(View view) {
@@ -22,6 +24,12 @@ public class BezierMainActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.to_bezier_circle:
                 toActivity = BezierCircleActivity.class;
+                break;
+            case R.id.to_bezier_round:
+                toActivity = BezierRoundActivity.class;
+                break;
+            case R.id.to_bezier_score:
+                toActivity = ScoreIndicatorActivity.class;
                 break;
             default:
                 toActivity = this.getClass();

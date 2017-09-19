@@ -7,9 +7,9 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 
+import com.example.common.view.common.CommonRecyclerViewAdapter;
+import com.example.common.view.common.CommonViewHolder;
 import com.example.practice.R;
-import com.example.practice.systemview.recyclerview.common.CommonRecyclerViewAdapter;
-import com.example.practice.systemview.recyclerview.common.CommonViewHolder;
 import com.example.practice.systemview.recyclerview.decoration.decoration.SampleOnDrawOverItemDecoration;
 
 import java.util.ArrayList;

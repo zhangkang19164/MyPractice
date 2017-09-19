@@ -1,4 +1,4 @@
-package com.example.practice.customview.bezier.circle.view;
+package com.example.practice.customview.bezier.indicator.view;
 
 import android.animation.ValueAnimator;
 import android.content.Context;

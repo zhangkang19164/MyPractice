@@ -1,4 +1,4 @@
-package com.example.practice.systemview.recyclerview.pinedview;
+package com.example.practice.systemview.recyclerview.pinedview.view;
 
 import android.view.View;
 
@@ -10,5 +10,5 @@ import android.view.View;
 public interface PinedHeaderCallBack {
     View getHeaderView();
 
-    void updateHeaderView(View var1, int var2);
+    void updateHeaderView(View headerView, int groupIndex);
 }

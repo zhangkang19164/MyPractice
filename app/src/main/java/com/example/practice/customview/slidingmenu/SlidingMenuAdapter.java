@@ -1,8 +1,8 @@
 package com.example.practice.customview.slidingmenu;
 
+import com.example.common.view.common.CommonRecyclerViewAdapter;
+import com.example.common.view.common.CommonViewHolder;
 import com.example.practice.R;
-import com.example.practice.systemview.recyclerview.common.CommonRecyclerViewAdapter;
-import com.example.practice.systemview.recyclerview.common.CommonViewHolder;
 
 import java.util.List;
 

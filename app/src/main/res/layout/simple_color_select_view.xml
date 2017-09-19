@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/show_color"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
+    <SeekBar
+        android:id="@+id/seek_bar_a"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:max="256" />
+
+    <TextView
+        android:id="@+id/seek_bar_a_text"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="right|center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textColor="@color/_1F1F1F"
+        android:textSize="18sp" />
+
+    <SeekBar
+        android:id="@+id/seek_bar_r"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:max="256" />
+
+    <TextView
+        android:id="@+id/seek_bar_r_text"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="right|center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textColor="@color/_1F1F1F"
+        android:textSize="18sp" />
+
+    <SeekBar
+        android:id="@+id/seek_bar_g"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:max="256" />
+
+    <TextView
+        android:id="@+id/seek_bar_g_text"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="right|center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textColor="@color/_1F1F1F"
+        android:textSize="18sp" />
+
+    <SeekBar
+        android:id="@+id/seek_bar_b"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:max="256" />
+
+    <TextView
+        android:id="@+id/seek_bar_b_text"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="right|center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textColor="@color/_1F1F1F"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/ok"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_gravity="right"
+        android:textColor="@color/_1F1F1F"
+        android:text="确定"
+        android:textSize="18sp" />
+</merge>

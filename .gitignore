@@ -6,3 +6,8 @@
 /captures
 .externalNativeBuild
 /.idea
+app/src/main/res/drawable-hdpi/
+app/src/main/res/drawable-xhdpi/
+app/src/main/res/drawable-xxxhdpi/
+common/libs/
+common/src/main/res/drawable/

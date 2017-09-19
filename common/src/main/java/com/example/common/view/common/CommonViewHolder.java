@@ -1,4 +1,4 @@
-package com.example.practice.systemview.recyclerview.common;
+package com.example.common.view.common;
 
 import android.support.v7.widget.RecyclerView;
 import android.util.SparseArray;

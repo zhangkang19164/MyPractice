@@ -1,4 +1,4 @@
-package com.example.practice.systemview.recyclerview.common;
+package com.example.common.view.common;
 
 import android.view.View;
 

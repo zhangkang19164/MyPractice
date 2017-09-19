@@ -7,9 +7,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.LinearSnapHelper;
 import android.support.v7.widget.RecyclerView;
 
+import com.example.common.view.common.CommonRecyclerViewAdapter;
+import com.example.common.view.common.CommonViewHolder;
 import com.example.practice.R;
-import com.example.practice.systemview.recyclerview.common.CommonRecyclerViewAdapter;
-import com.example.practice.systemview.recyclerview.common.CommonViewHolder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,6 +42,7 @@ public class RecyclerViewGroupingActivity extends AppCompatActivity {
             }
         });
         recyclerView.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
+
         LinearSnapHelper linearSnapHelper=new LinearSnapHelper();
         linearSnapHelper.attachToRecyclerView(recyclerView);
     }

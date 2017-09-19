@@ -1,13 +1,10 @@
-package com.example.practice.customview.bezier.circle;
+package com.example.practice.customview.bezier.indicator;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -16,7 +13,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.practice.R;
-import com.example.practice.customview.bezier.circle.view.CircleIndicatorView;
+import com.example.practice.customview.bezier.indicator.view.CircleIndicatorView;
 import com.example.practice.databinding.ActivityBezierCircleBinding;
 
 import java.util.ArrayList;

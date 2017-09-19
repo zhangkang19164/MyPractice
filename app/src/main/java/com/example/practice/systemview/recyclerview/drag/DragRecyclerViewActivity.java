@@ -11,10 +11,10 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.common.view.common.CommonRecyclerViewAdapter;
+import com.example.common.view.common.CommonViewHolder;
+import com.example.common.view.common.OnItemClickListener;
 import com.example.practice.R;
-import com.example.practice.systemview.recyclerview.common.CommonRecyclerViewAdapter;
-import com.example.practice.systemview.recyclerview.common.CommonViewHolder;
-import com.example.practice.systemview.recyclerview.common.OnItemClickListener;
 import com.example.practice.systemview.recyclerview.drag.view.DragItemTouchHelper;
 
 import java.util.ArrayList;
