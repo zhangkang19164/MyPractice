@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="presenter"
+            type="com.example.practice.other.setting.language.SettingLanguageActivity.Presenter"/>
+    </data>
+
+    <android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/language_english"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="@string/language_en"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/language_english_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onCheckedChanged="@{presenter.onCheckedChanged}"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/language_zh"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="@string/language_zh"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/language_zh_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onCheckedChanged="@{presenter.onCheckedChanged}"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/language_zh_r_tw"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="@string/language_zh_r_tw"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/language_zh_r_tw_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onCheckedChanged="@{presenter.onCheckedChanged}"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/confirm"
+            style="@style/button_style"
+            android:text="@string/confirm"
+            android:onClick="@{presenter.onViewClick}"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:text="@string/change_language_success" />
+    </android.support.v7.widget.LinearLayoutCompat>
+</layout>
