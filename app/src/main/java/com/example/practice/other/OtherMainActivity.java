@@ -12,6 +12,7 @@ import com.example.practice.other.changetextsize.ChangeTextSizeActivity;
 import com.example.practice.other.databinding.DataBindingMainActivity;
 import com.example.practice.other.loadconfig.LoadConfigMainActivity;
 import com.example.practice.other.readfile.ReadFileMainActivity;
+import com.example.practice.other.setting.SettingActivity;
 
 public class OtherMainActivity extends AppCompatActivity {
 
@@ -36,6 +37,9 @@ public class OtherMainActivity extends AppCompatActivity {
                 break;
             case R.id.to_mvvm:
                 toActivity = DataBindingMainActivity.class;
+                break;
+            case R.id.to_setting:
+                toActivity = SettingActivity.class;
                 break;
             default:
                 toActivity = MainActivity.class;

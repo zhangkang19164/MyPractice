@@ -31,6 +31,11 @@
             style="@style/button_style"
             android:onClick="onViewClicked"
             android:text="MVVM" />
+        <Button
+            android:id="@+id/to_setting"
+            style="@style/button_style"
+            android:onClick="onViewClicked"
+            android:text="设置" />
     </android.support.v7.widget.LinearLayoutCompat>
 
 </ScrollView>

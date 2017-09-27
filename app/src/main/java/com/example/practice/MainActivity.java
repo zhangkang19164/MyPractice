@@ -3,17 +3,13 @@ package com.example.practice;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
-import android.widget.SeekBar;
-import android.widget.TextView;
 
 import com.example.practice.customview.CustomMainActivity;
 import com.example.practice.dependencies.DependenciesMainActivity;
 import com.example.practice.other.OtherMainActivity;
+import com.example.practice.other.setting.language.UserConfig;
 import com.example.practice.systemview.SystemViewMainActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        UserConfig.settingLanguage(this);
         setContentView(R.layout.activity_main);
     }
 
