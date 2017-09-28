@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sex_items">
+        <item>男</item>
+        <item>女</item>
+        <item>外星人</item>
+    </string-array>
+
+    <declare-styleable name="MyExpandableListView">
+        <attr name="isShowChildDivider" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="MyTextView">
+        <attr name="time" format="string" />
+        <attr name="time_num" format="string">
+            <enum name="one" value="1" />
+            <enum name="two" value="2" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="MiuiWeatherView">
+        <attr name="line_interval" format="dimension" />
+        <attr name="min_point_height" format="dimension" />
+        <attr name="background_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="CircleIndicatorView">
+        <!--指示圆的半径-->
+        <attr name="indicator_radius" format="dimension" />
+        <!--指示圆的线宽-->
+        <attr name="indicator_width" format="dimension" />
+        <!--指示圆的颜色-->
+        <attr name="indicator_color" format="color" />
+        <!--指示圆之间的距离-->
+        <attr name="indicator_distance" format="dimension" />
+        <!--指示圆距底部的高度-->
+        <attr name="bottom_height" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="BezierRoundView">
+        <attr name="radius" format="dimension" />
+        <!--最大值-->
+        <attr name="max_value" format="float" />
+        <!--最小值-->
+        <attr name="min_value" format="float" />
+        <!--当前值-->
+        <attr name="current_value" format="float" />
+        <!--圆弧的宽度-->
+        <attr name="arc_width" format="dimension" />
+        <!--圆弧的背景颜色-->
+        <attr name="arc_background" format="color" />
+        <!--圆弧的指示颜色-->
+        <attr name="arc_indicator_color" format="color" />
+        <!--中间文字的大小-->
+        <attr name="middle_text_size" format="dimension" />
+        <!--中间文字的颜色-->
+        <attr name="middle_text_color" format="color" />
+        <!--中间文字的单位-->
+        <attr name="middle_unit" format="string" />
+        <!--中间文字单位的大小-->
+        <attr name="middle_unit_size" format="dimension" />
+        <!--中间文字单位的颜色-->
+        <attr name="middle_unit_color" format="color" />
+        <!--底部文字-->
+        <attr name="bottom_text" format="string" />
+        <!--底部文字大小-->
+        <attr name="bottom_text_size" format="dimension" />
+        <!--底部文字颜色-->
+        <attr name="bottom_text_color" format="color" />
+    </declare-styleable>
+</resources>

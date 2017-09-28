@@ -15,16 +15,6 @@
         <item name="android:textAllCaps">false</item>
     </style>
 
-    <style name="trade_common_subtitle">
-        <item name="android:textSize">12sp</item>
-        <item name="android:textColor">@color/_9C9C9C</item>
-    </style>
-
-    <style name="quote_sub_text">
-        <item name="android:textSize">12sp</item>
-        <item name="android:textColor">@color/_8F8D88</item>
-    </style>
-
     <declare-styleable name="RewroteV7AlertDialog">
         <attr name="android:layout" />
         <attr name="buttonPanelSideLayout" format="reference" />
@@ -35,13 +25,6 @@
         <attr name="showTitle" format="boolean" />
     </declare-styleable>
 
-    <style name="Tablayout_Title_Style">
-        <item name="android:textSize">15sp</item>
-    </style>
-    <style name="pop_anim">
-        <item name="android:windowEnterAnimation">@anim/pop_in</item>
-        <item name="android:windowExitAnimation">@anim/pop_out</item>
-    </style>
     <style name="No_Title_Activity_Style" parent="AppTheme">
         <item name="windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>

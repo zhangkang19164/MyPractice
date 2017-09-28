@@ -10,7 +10,7 @@ import com.example.practice.customview.CustomMainActivity;
 import com.example.practice.dependencies.DependenciesMainActivity;
 import com.example.practice.other.OtherMainActivity;
 import com.example.practice.other.setting.language.UserConfig;
-import com.example.practice.systemview.SystemViewMainActivity;
+import com.example.system.SystemViewMainActivity;
 
 public class MainActivity extends AppCompatActivity {
 

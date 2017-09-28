@@ -7,7 +7,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -20,46 +19,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".systemview.listview.divider.ListViewDividerActivity" />
-        <activity android:name=".systemview.listview.ListViewMainActivity" />
-        <activity android:name=".systemview.recyclerview.RecyclerViewMainActivity" />
-        <activity android:name=".systemview.recyclerview.decoration.other.DecorationActivity" />
-        <activity android:name=".systemview.recyclerview.grouping.RecyclerViewGroupingActivity" />
-        <activity android:name=".systemview.recyclerview.tradecommon.activity.TradeCommonActivity" />
-        <activity android:name=".systemview.textview.spannablestring.SpannableStringMainActivity" />
-        <activity android:name=".systemview.textview.TextViewMainActivity" />
-        <activity android:name=".systemview.expandablelistview.ExpandableListViewMainActivity" />
-        <activity android:name=".systemview.expandablelistview.type.ExpandableListViewTypeActivity" />
+
         <activity android:name=".customview.CustomMainActivity" />
         <activity android:name=".customview.linearlayoutcompat.LinearLayoutCompatMainActivity" />
-        <activity android:name=".systemview.dialog.DialogMainActivity" />
-        <activity android:name=".systemview.dialog.system.PickerActivity" />
-        <activity android:name=".systemview.dialog.system.SystemDialogActivity" />
-        <activity android:name=".systemview.dialog.custom.CustomDialogActivity" />
-        <activity android:name=".systemview.viewpage.ViewPageMainActivity" />
-        <activity
-            android:name=".systemview.viewpage.tablayout.TabLayoutMainActivity"
-            android:theme="@android:style/Theme.Black" />
+
         <activity android:name=".dependencies.lottie.LottieMainActivity" />
         <activity
             android:name=".dependencies.lottie.SplashActivity"
             android:theme="@style/No_Title_Activity_Style" />
-        <activity android:name=".systemview.popupwindow.PopupWindowMainActivity" />
-        <activity android:name=".systemview.popupwindow.system.SystemPopupWindowActivity" />
-        <activity android:name=".systemview.popupwindow.custom.CustomPopupWindowMainActivity" />
-        <activity android:name=".systemview.SystemViewMainActivity" />
         <activity android:name=".dependencies.DependenciesMainActivity" />
-        <activity android:name=".systemview.spinner.SpinnerMainActivity" />
         <activity android:name=".customview.picker.PickerMainActivity" />
         <activity android:name=".other.OtherMainActivity" />
         <activity android:name=".other.loadconfig.LoadConfigMainActivity" />
-        <activity android:name=".systemview.recyclerview.tradelist.TradeListMainActivity" />
         <activity android:name=".dependencies.wheelview.WheelviewMainActivity" />
-        <activity android:name=".systemview.listview.empty.EmptyMainActivity" />
-        <activity android:name=".systemview.recyclerview.edit.RecyclerEditActivity" />
-        <activity android:name=".systemview.recyclerview.market.MarketActivity" />
         <activity android:name=".dependencies.xrecyclerview.XRecyclerViewActivity" />
-        <activity android:name=".systemview.textview.marquee.MarqueeMainActivity" />
         <activity android:name=".customview.custom.CustomActivity" />
         <activity android:name=".other.changetextsize.ChangeTextSizeActivity" />
         <activity android:name=".other.readfile.ReadFileMainActivity" />
@@ -74,10 +47,8 @@
         <activity android:name=".customview.calendar.CalendarActivity" />
         <activity android:name=".customview.slidingmenu.SlidingMenuActivity" />
         <activity android:name=".customview.xiaomiweather.XiaoMiWeatherActivity" />
-        <activity android:name=".systemview.recyclerview.drag.DragRecyclerViewActivity" />
         <activity android:name=".customview.bezier.BezierMainActivity" />
         <activity android:name=".customview.bezier.indicator.BezierCircleActivity" />
-        <activity android:name=".systemview.recyclerview.pinedview.PinnedHeaderActivity" />
         <activity android:name=".customview.bezier.round.BezierRoundActivity" />
         <activity android:name=".customview.bezier.score.ScoreIndicatorActivity" />
         <activity android:name=".dependencies.smartrefresh.SmartRefreshLayoutActivity" />

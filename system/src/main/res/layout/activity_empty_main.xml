@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/button_01"
+        style="@style/button_style"
+        android:onClick="onViewClicked"
+        android:text="添加空集合" />
+    <Button
+        android:id="@+id/button_02"
+        style="@style/button_style"
+        android:onClick="onViewClicked"
+        android:text="添加非空集合" />
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="这是一个空View"
+        android:textColor="@color/_1F1F1F"
+        android:textSize="24sp"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/empty_view2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="这是一个空View2"
+        android:textColor="@color/_1F1F1F"
+        android:textSize="24sp"
+        android:visibility="gone"/>
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

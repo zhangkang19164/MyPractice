@@ -1,0 +1,7 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="divier_height">1dp</dimen>
+    <dimen name="sectioned_top">32dp</dimen>
+    <dimen name="group_divider_height">10dp</dimen>
+    <dimen name="item_divider_height">1dp</dimen>
+</resources>
