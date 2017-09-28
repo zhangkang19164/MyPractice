@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.example.custom.bezier.indicator.view.CircleIndicatorView
+            android:id="@+id/indicator_view_page"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/_E0E0E0"
+            app:bottom_height="20dp"
+            app:indicator_color="@color/_FF3E30"
+            app:indicator_distance="30dp"
+            app:indicator_radius="6dp"
+            app:indicator_width="1dp" />
+
+    </RelativeLayout>
+</layout>
+

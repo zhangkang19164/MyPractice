@@ -2,9 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.practice">
 
-    <!-- 写文件的权限,默认包含读的权限 -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET" />
+
 
     <application
         android:allowBackup="true"
@@ -20,42 +18,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".customview.CustomMainActivity" />
-        <activity android:name=".customview.linearlayoutcompat.LinearLayoutCompatMainActivity" />
 
-        <activity android:name=".dependencies.lottie.LottieMainActivity" />
-        <activity
-            android:name=".dependencies.lottie.SplashActivity"
-            android:theme="@style/No_Title_Activity_Style" />
-        <activity android:name=".dependencies.DependenciesMainActivity" />
-        <activity android:name=".customview.picker.PickerMainActivity" />
-        <activity android:name=".other.OtherMainActivity" />
-        <activity android:name=".other.loadconfig.LoadConfigMainActivity" />
-        <activity android:name=".dependencies.wheelview.WheelviewMainActivity" />
-        <activity android:name=".dependencies.xrecyclerview.XRecyclerViewActivity" />
-        <activity android:name=".customview.custom.CustomActivity" />
-        <activity android:name=".other.changetextsize.ChangeTextSizeActivity" />
-        <activity android:name=".other.readfile.ReadFileMainActivity" />
-        <activity android:name=".other.databinding.DataBindingMainActivity" />
-        <activity android:name=".other.databinding.recyclerview.MVVMOfRecyclerViewActivity" />
-        <activity android:name=".other.databinding.twoway.TwoWayActivity" />
-        <activity android:name=".other.databinding.expressionchain.ExpressionChainActivity" />
-        <activity android:name=".other.databinding.lambda.LambdaActivity" />
-        <activity android:name=".other.databinding.animation.AnimationActivity" />
-        <activity android:name=".other.databinding.customattributes.CustomAttributesActivity" />
-        <activity android:name=".dependencies.rxjava.RxJavaMainActivity" />
-        <activity android:name=".customview.calendar.CalendarActivity" />
-        <activity android:name=".customview.slidingmenu.SlidingMenuActivity" />
-        <activity android:name=".customview.xiaomiweather.XiaoMiWeatherActivity" />
-        <activity android:name=".customview.bezier.BezierMainActivity" />
-        <activity android:name=".customview.bezier.indicator.BezierCircleActivity" />
-        <activity android:name=".customview.bezier.round.BezierRoundActivity" />
-        <activity android:name=".customview.bezier.score.ScoreIndicatorActivity" />
-        <activity android:name=".dependencies.smartrefresh.SmartRefreshLayoutActivity" />
-        <activity android:name=".other.setting.SettingActivity" />
-        <activity android:name=".other.setting.language.SettingLanguageActivity" />
-        <activity android:name=".customview.imooc.IMoocMainActivity" />
-        <activity android:name=".customview.imooc.pie.PieChartActivity" />
     </application>
 
 </manifest>

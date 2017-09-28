@@ -1,0 +1,29 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.custom">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <activity android:name=".CustomMainActivity">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity android:name=".linearlayoutcompat.LinearLayoutCompatMainActivity" />
+        <activity android:name=".picker.PickerMainActivity" />
+        <activity android:name=".custom.CustomActivity" />
+        <activity android:name=".calendar.CalendarActivity" />
+        <activity android:name=".slidingmenu.SlidingMenuActivity" />
+        <activity android:name=".xiaomiweather.XiaoMiWeatherActivity" />
+        <activity android:name=".bezier.BezierMainActivity" />
+        <activity android:name=".bezier.indicator.BezierCircleActivity" />
+        <activity android:name=".bezier.round.BezierRoundActivity" />
+        <activity android:name=".bezier.score.ScoreIndicatorActivity" />
+        <activity android:name=".imooc.IMoocMainActivity" />
+        <activity android:name=".imooc.pie.PieChartActivity" />
+    </application>
+
+</manifest>

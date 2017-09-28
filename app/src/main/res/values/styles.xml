@@ -8,25 +8,5 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="button_style">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">60dp</item>
-        <item name="android:textSize">18sp</item>
-        <item name="android:textAllCaps">false</item>
-    </style>
 
-    <declare-styleable name="RewroteV7AlertDialog">
-        <attr name="android:layout" />
-        <attr name="buttonPanelSideLayout" format="reference" />
-        <attr name="listLayout" format="reference" />
-        <attr name="multiChoiceItemLayout" format="reference" />
-        <attr name="singleChoiceItemLayout" format="reference" />
-        <attr name="listItemLayout" format="reference" />
-        <attr name="showTitle" format="boolean" />
-    </declare-styleable>
-
-    <style name="No_Title_Activity_Style" parent="AppTheme">
-        <item name="windowNoTitle">true</item>
-        <item name="android:windowFullscreen">true</item>
-    </style>
 </resources>

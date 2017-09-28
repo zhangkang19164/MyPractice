@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/to_lottie"
+            style="@style/button_style"
+            android:onClick="onViewClicked"
+            android:text="Lottie库使用" />
+
+        <Button
+            android:id="@+id/to_wheelview"
+            style="@style/button_style"
+            android:onClick="onViewClicked"
+            android:text="Wheelview库使用" />
+
+        <Button
+            android:id="@+id/to_x_recycler_view"
+            style="@style/button_style"
+            android:onClick="onViewClicked"
+            android:text="XRecyclerView库使用" />
+
+        <Button
+            android:id="@+id/to_rx_java"
+            style="@style/button_style"
+            android:onClick="onViewClicked"
+            android:text="RxJava使用" />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</ScrollView>

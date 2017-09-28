@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="presenter"
+            type="com.example.custom.bezier.round.BezierRoundActivity.Presenter" />
+
+        <variable
+            name="isVisibility"
+            type="boolean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.example.custom.bezier.round.view.BezierRoundView
+            android:id="@+id/bezier_round_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#2D5AAB"
+            app:arc_background="@color/_FFC0CB"
+            app:arc_indicator_color="@color/_FF3E30"
+            app:arc_width="10dp"
+            app:bottom_text="测试文字"
+            app:bottom_text_color="@color/_1E1E1E"
+            app:bottom_text_size="24sp"
+            app:max_value="80"
+            app:middle_text_color="@android:color/white"
+            app:middle_text_size="20sp"
+            app:middle_unit="度"
+            app:middle_unit_color="@color/_8F8D88"
+            app:middle_unit_size="8sp"
+            app:min_value="30"
+            app:radius="70dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <EditText
+                android:id="@+id/min_value"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="输入最小值"
+                android:inputType="numberDecimal"
+                android:text="0" />
+
+            <EditText
+                android:id="@+id/max_value"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="输入最大值"
+                android:inputType="numberDecimal"
+                android:text="100" />
+
+            <EditText
+                android:id="@+id/current_value"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="输入当前值"
+                android:inputType="numberDecimal"
+                android:text="50" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <EditText
+                android:id="@+id/middle_unit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="输入单位"
+                android:text="度" />
+
+            <EditText
+                android:id="@+id/middle_unit_size"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="单位的文字大小"
+                android:inputType="numberSigned"
+                android:text="30" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <EditText
+                android:id="@+id/bottom_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="底部文字"
+                android:text="测试" />
+
+            <EditText
+                android:id="@+id/bottom_text_size"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="底部文字大小"
+                android:inputType="numberSigned"
+                android:text="30" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <CheckBox
+                android:id="@+id/is_need_animator"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onCheckedChanged="@{presenter.onCheckedChanged1}"
+                android:text="是否需要动画" />
+
+
+            <CheckBox
+                android:id="@+id/is_start_animator"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onCheckedChanged="@{presenter.onCheckedChanged2}"
+                android:text="是否立即开始动画" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/current_confirm"
+            style="@style/button_style"
+            android:onClick="@{presenter.onViewClick}"
+            android:text="确定" />
+
+        <Button
+            android:id="@+id/set_value"
+            style="@style/button_style"
+            android:onClick="@{presenter.onViewClick1}"
+            android:text="开始动画"
+            android:visibility="@{isVisibility?View.GONE:View.VISIBLE}" />
+
+    </LinearLayout>
+</layout>

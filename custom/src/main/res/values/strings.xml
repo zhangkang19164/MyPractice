@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">练习</string>
+    <string name="fom">"%.2f"</string>
+
+</resources>

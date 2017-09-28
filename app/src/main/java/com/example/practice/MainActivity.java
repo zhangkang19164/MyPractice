@@ -6,11 +6,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.example.practice.customview.CustomMainActivity;
-import com.example.practice.dependencies.DependenciesMainActivity;
-import com.example.practice.other.OtherMainActivity;
-import com.example.practice.other.setting.language.UserConfig;
+import com.example.custom.CustomMainActivity;
+import com.example.dependencies.DependenciesMainActivity;
+import com.example.other.OtherMainActivity;
+import com.example.other.setting.language.UserConfig;
 import com.example.system.SystemViewMainActivity;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onViewClicked(View view) {
-        Class<? extends Activity> toActivity;
+        Class<? extends Activity> toActivity = null;
         switch (view.getId()) {
             case R.id.to_system_view:
                 toActivity = SystemViewMainActivity.class;
