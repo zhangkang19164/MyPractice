@@ -2,13 +2,12 @@ apply plugin: 'com.android.library'
 //apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    compileSdkVersion project.compileSdkVersion
+    buildToolsVersion "${project.buildToolsVersion}"
 
     defaultConfig {
-//        applicationId "com.example.custom"
-        minSdkVersion 19
-        targetSdkVersion 26
+        minSdkVersion project.minSdkVersion
+        targetSdkVersion project.targetSdkVersion
         versionCode 1
         versionName "1.0"
 

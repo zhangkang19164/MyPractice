@@ -12,10 +12,74 @@ import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
 public class MyClass {
+    public DiaoSI diaoSI;
+    static DiaoSI DIAOSI = new DiaoSI();
+
+    public MyClass() {
+        diaoSI = new DiaoSI();
+    }
+
+    public long printString() {
+        long currentTimeMillis = System.currentTimeMillis();
+        for (int i = 0; i < 100000000; i++) {
+            diaoSI.setName("测试样例" + i);
+        }
+        return System.currentTimeMillis() - currentTimeMillis;
+
+    }
+
+    public long printString2() {
+        DiaoSI diaoSI = this.diaoSI;
+        long currentTimeMillis = System.currentTimeMillis();
+        for (int i = 0; i < 100000000; i++) {
+            diaoSI.setName("测试样例" + i);
+        }
+        return System.currentTimeMillis() - currentTimeMillis;
+    }
+
+    public long printString3() {
+        DiaoSI diaoSI = new DiaoSI();
+        long currentTimeMillis = System.currentTimeMillis();
+        for (int i = 0; i < 100000000; i++) {
+            diaoSI.setName("测试样例" + i);
+        }
+        return System.currentTimeMillis() - currentTimeMillis;
+    }
+
+    public long printString4() {
+        long currentTimeMillis = System.currentTimeMillis();
+        for (int i = 0; i < 100000000; i++) {
+            DIAOSI.setName("测试样例" + i);
+        }
+        return System.currentTimeMillis() - currentTimeMillis;
+    }
 
     public static void main(String args[]) {
-        DecimalFormat decimalFormat=new DecimalFormat("#.0");
-        System.out.println(decimalFormat.format(3.144));
+//        DecimalFormat decimalFormat=new DecimalFormat("#.0");
+//        System.out.println(decimalFormat.format(3.144));
+        int number=100;
+        MyClass myClass = new MyClass();
+        long time = 0;
+        for (int i = 0; i < number; i++) {
+            time += myClass.printString();
+        }
+        System.out.println("成员变量用时：" + (time / number));
+        time = 0;
+        for (int i = 0; i < number; i++) {
+            time += myClass.printString2();
+        }
+        System.out.println("成员变量赋值给局部变量用时：" + (time / number));
+        time = 0;
+        for (int i = 0; i < number; i++) {
+            time += myClass.printString3();
+        }
+        System.out.println("局部变量用时：" + (time / number));
+        time = 0;
+        for (int i = 0; i < number; i++) {
+            time += myClass.printString4();
+        }
+        System.out.println("类变量用时：" + (time / number));
+
     }
 
     private static void test() {

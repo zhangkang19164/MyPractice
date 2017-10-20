@@ -34,11 +34,11 @@ public class MVVMOfRecyclerViewActivity extends AppCompatActivity {
     }
 
     public class Presenter {
-        public void addItem(View view) {
+        public void addItem() {
             mvvmAdapter.add("我是新加的");
         }
 
-        public void deleteItem(View view) {
+        public void deleteItem() {
             mvvmAdapter.delete();
         }
     }

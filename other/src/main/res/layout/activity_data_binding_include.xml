@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="includeMode"
+            type="com.example.other.databinding.include.IncludeMode" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            style="@style/button_style"
+            android:text="下面的内容是include的" />
+
+        <include
+            layout="@layout/data_binding_include"
+            app:includeMode="@{includeMode}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="@{includeMode.password}"
+            android:textColor="@color/_FF3E30" />
+
+        <include
+            layout="@layout/data_binding_include"
+            app:includeMode="@{includeMode}" />
+    </LinearLayout>
+</layout>

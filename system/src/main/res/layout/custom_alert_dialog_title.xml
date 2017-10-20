@@ -2,12 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/custom_dialog_title_layout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="50dp"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/custom_dialog_title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:textSize="16sp"
+        android:textColor="#444444"
+        android:text="预警提醒"
         android:gravity="center" />
 </LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.example.dependencies.greendao.GreenDaoActivity.Presenter" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            style="@style/button_style"
+            android:onClick="@{() -> presenter.insertOn()}"
+            android:text="插入一条数据" />
+
+        <Button
+            style="@style/button_style"
+            android:onClick="@{() -> presenter.insertMult()}"
+            android:text="插入多条数据" />
+
+        <Button
+            style="@style/button_style"
+            android:onClick="@{() -> presenter.queryAll()}"
+            android:text="查询所有数据" />
+
+        <Button
+            style="@style/button_style"
+            android:onClick="@{() -> presenter.deleteAll()}"
+            android:text="删除所有数据" />
+    </LinearLayout>
+</layout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <index>
+        <title>
+            <zh-jt>HOTFA1</zh-jt>
+            <zh-ft>HOTFA2</zh-ft>
+            <en>HOTFA3</en>
+        </title>
+        <setting>
+            <zh-jt>设置</zh-jt>
+            <zh-ft>設置</zh-ft>
+            <en>Setting</en>
+        </setting>
+        <qr_code>
+            <zh-jt>扫描二维码</zh-jt>
+            <zh-ft>掃描二維碼</zh-ft>
+            <en>Scan QR code</en>
+        </qr_code>
+        <manual_input>
+            <zh-jt>手动输入</zh-jt>
+            <zh-ft>手動輸入</zh-ft>
+            <en>Manual input</en>
+        </manual_input>
+    </index>
+
+</root>

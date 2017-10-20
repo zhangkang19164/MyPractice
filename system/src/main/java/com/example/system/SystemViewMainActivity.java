@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.example.system.dialog.DialogMainActivity;
 import com.example.system.expandablelistview.ExpandableListViewMainActivity;
+import com.example.system.fragment.FragmentMainActivity;
 import com.example.system.listview.ListViewMainActivity;
 import com.example.system.popupwindow.PopupWindowMainActivity;
 import com.example.system.recyclerview.RecyclerViewMainActivity;
@@ -55,6 +56,9 @@ public class SystemViewMainActivity extends AppCompatActivity {
 
         } else if (i == R.id.to_spinner) {
             toActivity = SpinnerMainActivity.class;
+
+        }else if (i == R.id.to_fragment) {
+            toActivity = FragmentMainActivity.class;
 
         }
         startActivity(new Intent(view.getContext(), toActivity));

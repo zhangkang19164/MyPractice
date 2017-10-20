@@ -1,12 +1,15 @@
 package com.example.other.readfile;
 
 import android.content.Context;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.Toast;
 
 
 import com.example.other.R;
+import com.example.other.databinding.ActivityReadFileMainBinding;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -19,11 +22,13 @@ import java.util.Properties;
 
 public class ReadFileMainActivity extends AppCompatActivity {
     private static final String TAG = "ReadFileMainActivity";
+    private ActivityReadFileMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_read_file_main);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_read_file_main);
+        binding.setPresenter(new Presenter());
 //        readRaw();
 //        readAssets();
         readProperties();
@@ -42,8 +47,9 @@ public class ReadFileMainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
     //向/Data/data目录写入文件
-    private void writeDataData(){
+    private void writeDataData() {
         try {
             FileOutputStream outputStream = openFileOutput("test.txt", Context.MODE_PRIVATE);
             outputStream.write("hello word".getBytes());
@@ -52,6 +58,7 @@ public class ReadFileMainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
     //读取/data/data/目录下的文件
     private void readDataData() {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
@@ -110,6 +117,13 @@ public class ReadFileMainActivity extends AppCompatActivity {
                 e1.printStackTrace();
             }
             return "";
+        }
+    }
+
+    public class Presenter {
+        public void readConfig() {
+            String config = RuntimeConfig.getInstance().getStringConfig(RuntimeConfig.CONFIG_QR_CODE_PREFIX);
+            Toast.makeText(ReadFileMainActivity.this, config, Toast.LENGTH_SHORT).show();
         }
     }
 }

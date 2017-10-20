@@ -10,11 +10,13 @@
 
 
     <TextView
+        android:id="@+id/custom_dialog_content"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:gravity="center"
-        android:text="中间部分"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="该手机号已经被其他人占用，可以换个手机号"
+        android:textColor="#444444"
+        android:textSize="16sp" />
 </android.support.v7.widget.LinearLayoutCompat>

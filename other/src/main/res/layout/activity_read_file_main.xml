@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout>
 
-</LinearLayout>
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.example.other.readfile.ReadFileMainActivity.Presenter" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            style="@style/button_style"
+            android:onClick="@{()->presenter.readConfig()}"
+            android:text="读取配置文件" />
+    </LinearLayout>
+</layout>

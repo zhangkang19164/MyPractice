@@ -31,6 +31,36 @@
             style="@style/button_style"
             android:onClick="onViewClicked"
             android:text="RxJava使用" />
+
+        <Button
+            android:id="@+id/to_android_gif_drawable"
+            style="@style/button_style"
+            android:onClick="onViewClicked"
+            android:text="gif-drawable库" />
+
+        <Button
+            android:id="@+id/to_glide"
+            style="@style/button_style"
+            android:onClick="onViewClicked"
+            android:text="Glide库" />
+
+        <Button
+            android:id="@+id/to_qr_code"
+            style="@style/button_style"
+            android:onClick="onViewClicked"
+            android:text="二维码扫描" />
+
+        <Button
+            android:id="@+id/to_green_dao"
+            style="@style/button_style"
+            android:onClick="onViewClicked"
+            android:text="GreenDao库" />
+
+        <Button
+            android:id="@+id/to_matisse"
+            style="@style/button_style"
+            android:onClick="onViewClicked"
+            android:text="图片选择器" />
     </android.support.v7.widget.LinearLayoutCompat>
 
 </ScrollView>

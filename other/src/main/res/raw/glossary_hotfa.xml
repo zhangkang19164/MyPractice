@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Glossary
+    Default="2"
+    Note="0 - SimplifiedChinese; 1 - English; 2 - TraditionalChinese"
+    Version="V0.0.0.1">
+    <Item
+        Base="hotfa_hotfa"
+        English="HOTFA"
+        SimplifiedChinese="HOTFA"
+        TraditionalChinese="HOTFA" />
+    <Item
+        Base="hotfa_no_data"
+        English="No data"
+        SimplifiedChinese="尚未添加令牌"
+        TraditionalChinese="尚未添加令牌" />
+    <Item
+        Base="hotfa_two_ways"
+        English="HOTFA"
+        SimplifiedChinese="Please add token by the following two ways"
+        TraditionalChinese="請選擇以下兩種方式添加" />
+    <Item
+        Base="hotfa_token_serial"
+        English="Token serial"
+        SimplifiedChinese="令牌序列"
+        TraditionalChinese="令牌序列" />
+    <Item
+        Base="hotfa_add"
+        English="Add"
+        SimplifiedChinese="添加"
+        TraditionalChinese="添加" />
+    <Item
+        Base="hotfa_setting"
+        English="Setting"
+        SimplifiedChinese="设置"
+        TraditionalChinese="設置" />
+    <Item
+        Base="hotfa_set_password"
+        English="Set password"
+        SimplifiedChinese="密保"
+        TraditionalChinese="密保" />
+    <Item
+        Base="hotfa_delete_password"
+        English="Delete password"
+        SimplifiedChinese="取消密保"
+        TraditionalChinese="取消密保" />
+    <Item
+        Base="hotfa_security"
+        English="Security"
+        SimplifiedChinese="已密保"
+        TraditionalChinese="已密保" />
+    <Item
+        Base="hotfa_top"
+        English="Top"
+        SimplifiedChinese="置頂"
+        TraditionalChinese="置顶" />
+    <Item
+        Base="hotfa_delete"
+        English="Delete"
+        SimplifiedChinese="删除"
+        TraditionalChinese="刪除" />
+    <Item
+        Base="hotfa_dynamic_code"
+        English="Dynamic code"
+        SimplifiedChinese="动态码"
+        TraditionalChinese="動態碼" />
+    <Item
+        Base="hotfa_copy"
+        English="Copy"
+        SimplifiedChinese="点击复制"
+        TraditionalChinese="點擊複製" />
+    <Item
+        Base="hotfa_back"
+        English="Back"
+        SimplifiedChinese="返回"
+        TraditionalChinese="返回" />
+    <Item
+        Base="hotfa_delete_token"
+        English="Delete token infomation?"
+        SimplifiedChinese="删除令牌信息？"
+        TraditionalChinese="刪除令牌信息？" />
+    <Item
+        Base="hotfa_cancel"
+        English="Cancel"
+        SimplifiedChinese="取消"
+        TraditionalChinese="取消" />
+    <Item
+        Base="hotfa_set_gesture"
+        English="Set gesture password"
+        SimplifiedChinese="设置手势密码"
+        TraditionalChinese="設置手勢密碼" />
+    <Item
+        Base="hotfa_gesture_success"
+        English="Set gesture successfully"
+        SimplifiedChinese="手势密码设置成功"
+        TraditionalChinese="手勢密碼設置成功" />
+    <Item
+        Base="hotfa_gesture_password"
+        English="Gesture password"
+        SimplifiedChinese="手势密码"
+        TraditionalChinese="手勢密碼" />
+    <Item
+        Base="hotfa_forget_gesture"
+        English="Forget gesture password"
+        SimplifiedChinese="忘记手势密码"
+        TraditionalChinese="忘記手勢密碼" />
+    <Item
+        Base="hotfa_delete_gesture"
+        English="Delete gesture password"
+        SimplifiedChinese="取消手势密码"
+        TraditionalChinese="取消手勢密碼" />
+    <Item
+        Base="hotfa_draw_pattern"
+        English="Please draw the unlock pattern"
+        SimplifiedChinese="请绘制解锁图案"
+        TraditionalChinese="請繪製解鎖圖案" />
+    <Item
+        Base="hotfa_draw_prompt"
+        English="The unlock pattern is used to protect the token. After the success of drawing, each time you view the dynamic token code required to enter the unlock pattern"
+        SimplifiedChinese="绘制的解锁图案用于保护该令牌，绘制成功后每次查看令牌动态码时需先输入该解锁图案"
+        TraditionalChinese="繪製的解鎖圖案用於保護該權杖，繪製成功後每次查看權杖動態碼時需先輸入該解鎖圖案" />
+    <Item
+        Base="hotfa_draw_again"
+        English="Please draw the unlock pattern again"
+        SimplifiedChinese="再次绘制解锁图案"
+        TraditionalChinese="再次繪製解鎖圖案" />
+    <Item
+        Base="hotfa_scan_qrcode"
+        English="Scan QR Code"
+        SimplifiedChinese="扫描二维码"
+        TraditionalChinese="掃描二維碼" />
+    <Item
+        Base="hotfa_manual"
+        English="Manual"
+        SimplifiedChinese="手动输入"
+        TraditionalChinese="手動輸入" />
+    <Item
+        Base="hotfa_album"
+        English="Album"
+        SimplifiedChinese="相册"
+        TraditionalChinese="相冊" />
+    <Item
+        Base="hotfa_align_qrcode"
+        English="Align QR Code within the frame to scan"
+        SimplifiedChinese="请将二维码放在方框内"
+        TraditionalChinese="請將二維碼放在方框內" />
+    <Item
+        Base="hotfa_add_token"
+        English="Add token"
+        SimplifiedChinese="添加令牌"
+        TraditionalChinese="添加令牌" />
+    <Item
+        Base="hotfa_ok"
+        English="OK"
+        SimplifiedChinese="确认"
+        TraditionalChinese="確認" />
+    <Item
+        Base="hotfa_token_success"
+        English="Add token successfully"
+        SimplifiedChinese="令牌信息添加成功"
+        TraditionalChinese="令牌資訊添加成功" />
+    <Item
+        Base="hotfa_quit_token"
+        English="Give up to add a token?"
+        SimplifiedChinese="放弃添加令牌？"
+        TraditionalChinese="令牌序列" />
+    <Item
+        Base="hotfa_yes"
+        English="Yes"
+        SimplifiedChinese="是"
+        TraditionalChinese="是" />
+    <Item
+        Base="hotfa_no"
+        English="No"
+        SimplifiedChinese="否"
+        TraditionalChinese="否" />
+    <Item
+        Base="hotfa_token_alias"
+        English="Please input token alias"
+        SimplifiedChinese="请输入令牌别名"
+        TraditionalChinese="請輸入令牌別名" />
+    <Item
+        Base="hotfa_token_serial"
+        English="Please input token serial"
+        SimplifiedChinese="请输入令牌序列号"
+        TraditionalChinese="請輸入令牌序號" />
+    <Item
+        Base="hotfa_secret_key"
+        English="Please input secret key"
+        SimplifiedChinese="请输入密钥"
+        TraditionalChinese="請輸入密鑰" />
+    <Item
+        Base="hotfa_language"
+        English="Language"
+        SimplifiedChinese="语言"
+        TraditionalChinese="語言" />
+    <Item
+        Base="hotfa_help"
+        English="Help"
+        SimplifiedChinese="帮助"
+        TraditionalChinese="幫助" />
+    <Item
+        Base="hotfa_about"
+        English="About"
+        SimplifiedChinese="关于"
+        TraditionalChinese="關於" />
+    <Item
+        Base="hotfa_version"
+        English="Version"
+        SimplifiedChinese="版本号"
+        TraditionalChinese="版本號" />
+</Glossary>

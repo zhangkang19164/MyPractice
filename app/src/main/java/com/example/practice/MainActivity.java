@@ -9,6 +9,7 @@ import android.view.View;
 import com.example.custom.CustomMainActivity;
 import com.example.dependencies.DependenciesMainActivity;
 import com.example.other.OtherMainActivity;
+import com.example.other.readfile.RuntimeConfig;
 import com.example.other.setting.language.UserConfig;
 import com.example.system.SystemViewMainActivity;
 
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         UserConfig.settingLanguage(this);
+        RuntimeConfig.getInstance().loadConfig(this);
         setContentView(R.layout.activity_main);
     }
 

@@ -16,9 +16,9 @@
 
         <Button
             style="@style/button_style"
-            app:changeTextColor="@{@color/_FF3E30}"
             android:onClick="@{presenter.toRecyclerView}"
-            android:text="RecyclerView使用" />
+            android:text="RecyclerView使用"
+            app:changeTextColor="@{@color/_FF3E30}" />
 
         <Button
             style="@style/button_style"
@@ -44,6 +44,11 @@
             style="@style/button_style"
             android:onClick="@{presenter.toCustomAttributes}"
             android:text="自定义属性" />
+
+        <Button
+            style="@style/button_style"
+            android:onClick="@{()->presenter.toInclude()}"
+            android:text="Include" />
 
     </LinearLayout>
 </layout>

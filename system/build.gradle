@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    compileSdkVersion project.compileSdkVersion
+    buildToolsVersion "${project.buildToolsVersion}"
 
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 26
+        minSdkVersion project.minSdkVersion
+        targetSdkVersion project.targetSdkVersion
         versionCode 1
         versionName "1.0"
 
@@ -32,6 +32,7 @@ dependencies {
     compile "com.android.support:design:${project.supportVersion}"
     compile "com.android.support:support-v4:${project.supportVersion}"
     compile "com.android.support:support-vector-drawable:${project.supportVersion}"
-    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-alpha-1'
     compile project(':common')
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-alpha-1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }

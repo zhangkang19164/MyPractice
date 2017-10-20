@@ -1,5 +1,6 @@
 package com.example.system.dialog.custom;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -32,7 +33,14 @@ public class CustomDialogActivity extends AppCompatActivity {
 
     private void button_01() {
         CustomDialog.Builder builder = new CustomDialog.Builder(this);
-        builder.setContext("测试内容")
+        builder.setTitle("提醒")
+                .setContent("我是内容!")
+                .setButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                })
                 .create()
                 .show();
     }

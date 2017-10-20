@@ -8,22 +8,12 @@
     app:showDividers="middle">
 
     <Button
+        android:id="@+id/custom_dialog_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:textColor="@color/_3C9FFC"
-        android:text="取消"
         android:textSize="17sp"
         android:background="@android:color/white"/>
-
-    <Button
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:textColor="@color/_3C9FFC"
-        android:text="退出"
-        android:textSize="17sp"
-        android:background="@android:color/white"/>
-
 
 </android.support.v7.widget.LinearLayoutCompat>

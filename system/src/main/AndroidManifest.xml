@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.system">
 
@@ -20,9 +21,7 @@
         <activity android:name=".dialog.system.SystemDialogActivity" />
         <activity android:name=".dialog.custom.CustomDialogActivity" />
         <activity android:name=".viewpage.ViewPageMainActivity" />
-        <activity
-            android:name=".viewpage.tablayout.TabLayoutMainActivity"
-             />
+        <activity android:name=".viewpage.tablayout.TabLayoutMainActivity" />
         <activity android:name=".popupwindow.PopupWindowMainActivity" />
         <activity android:name=".popupwindow.system.SystemPopupWindowActivity" />
         <activity android:name=".popupwindow.custom.CustomPopupWindowMainActivity" />
@@ -35,6 +34,7 @@
         <activity android:name=".textview.marquee.MarqueeMainActivity" />
         <activity android:name=".recyclerview.drag.DragRecyclerViewActivity" />
         <activity android:name=".recyclerview.pinedview.PinnedHeaderActivity" />
+        <activity android:name=".fragment.FragmentMainActivity"></activity>
     </application>
 
 </manifest>

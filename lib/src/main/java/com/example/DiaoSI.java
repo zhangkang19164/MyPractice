@@ -13,9 +13,9 @@ public class DiaoSI {
     private boolean has_Car;
     private Object fangzi;
 
-//    public String getName() {
-//        return name;
-//    }
+    public String getName() {
+        return name;
+    }
 
     public void setName(String name) {
         this.name = name;

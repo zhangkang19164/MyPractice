@@ -3,11 +3,12 @@
 buildscript {
     repositories {
         jcenter()
+        mavenCentral()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.3'
-        classpath 'com.jakewharton:butterknife-gradle-plugin:8.5.1'
         classpath 'com.novoda:bintray-release:0.4.0'
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2' // add plugin
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -24,11 +25,30 @@ allprojects {
         }
         maven { url "https://jitpack.io" }
 
+        maven { url "https://maven.google.com" }
+//        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+
     }
 
     ext {
-        daggerVersion = "2.0"
+
+        //编译工具版本号
+        buildToolsVersion = "26.0.2"
+        //编译SDK版本
+        compileSdkVersion = 26
+        //最低支持版本
+        minSdkVersion = 15
+        //已经充分测试通过的版本
+        targetSdkVersion = 26
+        //
         supportVersion = "26.0.0-alpha1"
+        annotationsVersion = "26.0.2"
+
+        daggerVersion = "2.0"
+
+        //Glide 版本
+        glideVersion = "4.2.0"
+
     }
 }
 

@@ -15,12 +15,12 @@
 
         <Button
             style="@style/button_style"
-            android:onClick="@{presenter.addItem}"
+            android:onClick="@{()->presenter.addItem()}"
             android:text="增加一个" />
 
         <Button
             style="@style/button_style"
-            android:onClick="@{presenter.deleteItem}"
+            android:onClick="@{()->presenter.deleteItem()}"
             android:text="删除一个" />
 
         <android.support.v7.widget.RecyclerView
