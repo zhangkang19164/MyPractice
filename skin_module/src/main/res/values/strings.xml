@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">skin_module</string>
+    <!-- 换肤中透明度变换-->
+    <string name="alpha">1.0</string>
+    <string name="alpha_day">1.0</string>
+    <string name="alpha_night">0.8</string>
+
+    <string name="alpha_10_7">1.0</string>
+    <string name="alpha_10_7_day">1.0</string>
+    <string name="alpha_10_7_night">0.7</string>
+</resources>

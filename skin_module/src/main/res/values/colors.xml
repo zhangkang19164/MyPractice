@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="_474a5c">#ff474a5c</color>
+    <color name="_cacaca">#ffcacaca</color>
+    <color name="_1f212d">#ff1f212d</color>
+    <color name="_f5f5f5">#fff5f5f5</color>
+    <color name="_ffffff">#ffffffff</color>
+    <color name="_1A1D26">#ff1A1D26</color>
+    <color name="bg_F24957_1F212D">#ffF24957</color>
+    <color name="bg_F24957_1F212D_day">#ffF24957</color>
+    <color name="bg_F24957_1F212D_night">#ff1F212D</color>
+
+    <color name="tc_ffffff_cacaca">#ffffff</color>
+    <color name="tc_ffffff_cacaca_day">#ffffff</color>
+    <color name="tc_ffffff_cacaca_night">#cacaca</color>
+
+    <color name="bg_ffffff_1F212D">#ffffff</color>
+    <color name="bg_ffffff_1F212D_day">#ffffff</color>
+    <color name="bg_ffffff_1F212D_night">#1F212D</color>
+
+    <color name="tc_454545_cacaca">#454545</color>
+    <color name="tc_454545_cacaca_day">#454545</color>
+    <color name="tc_454545_cacaca_night">#cacaca</color>
+
+    <color name="tc_676769_cacaca">#676769</color>
+    <color name="tc_676769_cacaca_day">#676769</color>
+    <color name="tc_676769_cacaca_night">#cacaca</color>
+
+    <color name="tc_676767_999999">#676767</color>
+    <color name="tc_676767_999999_day">#676767</color>
+    <color name="tc_676767_999999_night">#999999</color>
+    <!--主view背景-->
+    <color name="zx_main_bg">#ffffff</color>
+    <color name="zx_main_bg_day">#ffffff</color>
+    <color name="zx_main_bg_night">#1F212D</color>
+
+    <color name="tc_timeline">#666666</color>
+    <color name="tc_timeline_day">#666666</color>
+    <color name="tc_timeline_night">#999999</color>
+
+    <!--主背景-->
+    <color name="zx_main1_bg">#ffffff</color>
+    <color name="zx_main1_bg_day">#ffffff</color>
+    <color name="zx_main1_bg_night">#1A1D26</color>
+
+    <color name="bg_EEEEEE_1A1D26">#EEEEEE</color>
+    <color name="bg_EEEEEE_1A1D26_day">#EEEEEE</color>
+    <color name="bg_EEEEEE_1A1D26_night">#1A1D26</color>
+
+    <color name="bg_f5f5f5_262938">#f5f5f5</color>
+    <color name="bg_f5f5f5_262938_day">#f5f5f5</color>
+    <color name="bg_f5f5f5_262938_night">#262938</color>
+
+    <color name="bg_e6e6e6_262938">#e6e6e6</color>
+    <color name="bg_e6e6e6_262938_day">#e6e6e6</color>
+    <color name="bg_e6e6e6_262938_night">#262938</color>
+
+    <color name="tc_444444_999999">#444444</color>
+    <color name="tc_444444_999999_day">#444444</color>
+    <color name="tc_444444_999999_night">#999999</color>
+
+    <color name="divide">#ffd6d6d9</color>
+    <color name="divide_day">#ffd6d6d9</color>"
+    <color name="divide_night">#ff1F212D</color>"
+
+    <color name="bg_F5F5F5_1A1D26">#F5F5F5</color>
+    <color name="bg_F5F5F5_1A1D26_day">#F5F5F5</color>
+    <color name="bg_F5F5F5_1A1D26_night">#1A1D26</color>
+
+    <color name="bg_D1D6DA_262938">#D1D6DA</color>
+    <color name="bg_D1D6DA_262938_day">#D1D6DA</color>
+    <color name="bg_D1D6DA_262938_night">#262938</color>
+
+    <color name="di_D1D6DA_262938">#D1D6DA</color>
+    <color name="di_D1D6DA_262938_day">#D1D6DA</color>
+    <color name="di_D1D6DA_262938_night">#262938</color>
+
+    <color name="tc_666666_999999">#666666</color>
+    <color name="tc_666666_999999_day">#666666</color>
+    <color name="tc_666666_999999_night">#999999</color>
+
+    <color name="tc_e84b4b_999999">#e84b4b</color>
+    <color name="tc_e84b4b_999999_day">#e84b4b</color>
+    <color name="tc_e84b4b_999999_night">#999999</color>
+
+    <color name="bg_F5F5F5_1F212D">#F5F5F5</color>
+    <color name="bg_F5F5F5_1F212D_day">#F5F5F5</color>
+    <color name="bg_F5F5F5_1F212D_night">#1F212D</color>
+
+    <color name="bg_d6d6d9_1A1D26">#d6d6d9</color>
+    <color name="bg_d6d6d9_1A1D26_day">#d6d6d9</color>
+    <color name="bg_d6d6d9_1A1D26_night">#1A1D26</color>
+
+    <color name="bg_EEEEEE_1F212D">#EEEEEE</color>
+    <color name="bg_EEEEEE_1F212D_day">#EEEEEE</color>
+    <color name="bg_EEEEEE_1F212D_night">#1F212D</color>
+
+    <color name="tc_454545_999999">#454545</color>
+    <color name="tc_454545_999999_day">#454545</color>
+    <color name="tc_454545_999999_night">#999999</color>
+
+    <color name="tc_676767_cacaca">#676767</color>
+    <color name="tc_676767_cacaca_day">#676767</color>
+    <color name="tc_676767_cacaca_night">#cacaca</color>
+
+    <color name="di_eeeeee_444444">#eeeeee</color>
+    <color name="di_eeeeee_444444_day">#eeeeee</color>
+    <color name="di_eeeeee_444444_night">#444444</color>
+
+    <color name="tc_ffffff_999999">#ffffff</color>
+    <color name="tc_ffffff_999999_day">#ffffff</color>
+    <color name="tc_ffffff_999999_night">#999999</color>
+
+    <color name="bg_f6f6f8_1f212d">#f6f6f8</color>
+    <color name="bg_f6f6f8_1f212d_day">#f6f6f8</color>
+    <color name="bg_f6f6f8_1f212d_night">#1f212d</color>
+
+    <color name="bg_ffffff_262938">#ffffff</color>
+    <color name="bg_ffffff_262938_day">#ffffff</color>
+    <color name="bg_ffffff_262938_night">#262938</color>
+
+    <color name="bg_f6f6f8_262938">#f6f6f8</color>
+    <color name="bg_f6f6f8_262938_day">#f6f6f8</color>
+    <color name="bg_f6f6f8_262938_night">#262938</color>
+
+    <color name="bg_f6f6f8_1A1D26">#f6f6f8</color>
+    <color name="bg_f6f6f8_1A1D26_day">#f6f6f8</color>
+    <color name="bg_f6f6f8_1A1D26_night">#1A1D26</color>
+
+    <color name="tc_000000_999999">#000000</color>
+    <color name="tc_000000_999999_day">#000000</color>
+    <color name="tc_000000_999999_night">#999999</color>
+
+
+    <color name="bg_d2d2d2_444444">#d2d2d2</color>
+    <color name="bg_d2d2d2_444444_day">#d2d2d2</color>
+    <color name="bg_d2d2d2_444444_night">#444444</color>
+
+    <color name="bg_efeff4_1a1d26">#efeff4</color>
+    <color name="bg_efeff4_1a1d26_day">#efeff4</color>
+    <color name="bg_efeff4_1a1d26_night">#1a1d26</color>
+</resources>

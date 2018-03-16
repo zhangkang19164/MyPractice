@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
+    package="com.hundsun.winner.skin_module">
+
+    <application
+        android:allowBackup="false"
+        android:configChanges="keyboardHidden|orientation"
+        android:screenOrientation="portrait">
+
+    </application>
+
+</manifest>
