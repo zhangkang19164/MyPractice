@@ -4,13 +4,16 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 
+import com.example.common.base.BaseActivity;
+import com.example.common.test.Test;
 import com.example.system.R;
 import com.example.system.viewpage.tablayout.TabLayoutMainActivity;
 
 
-public class ViewPageMainActivity extends AppCompatActivity {
+public class ViewPageMainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,4 +36,6 @@ public class ViewPageMainActivity extends AppCompatActivity {
             startActivity(new Intent(v.getContext(), toActivity));
         }
     };
+
+
 }

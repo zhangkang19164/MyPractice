@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.example.other.encode.EncodeModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:afterTextChanged="@{model.afterTextChanged}"
+            android:background="@android:color/white"
+            android:hint="输入要加密的内容"
+            android:inputType="text"
+            android:padding="5dp"
+            android:textColor="@color/_1F1F1F"
+            android:textSize="16sp" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <Button
+                style="@style/button_style"
+                android:layout_weight="1"
+                android:onClick="@{()->model.DESEncode()}"
+                android:text="DES加密" />
+
+            <Button
+                style="@style/button_style"
+                android:layout_weight="1"
+                android:onClick="@{()->model.DESDecode()}"
+                android:text="DES解密" />
+        </android.support.v7.widget.LinearLayoutCompat>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@android:color/white"
+            android:padding="10dp"
+            android:text="@{model.resultForDES}"
+            android:textColor="@color/_1F1F1F"
+            android:textSize="16sp" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <Button
+                style="@style/button_style"
+                android:layout_weight="1"
+                android:onClick="@{()->model.AESEncode()}"
+                android:text="AES加密" />
+
+            <Button
+                style="@style/button_style"
+                android:layout_weight="1"
+                android:onClick="@{()->model.AESDecode()}"
+                android:text="AES解密" />
+        </android.support.v7.widget.LinearLayoutCompat>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@android:color/white"
+            android:padding="10dp"
+            android:text="@{model.resultForAES}"
+            android:textColor="@color/_1F1F1F"
+            android:textSize="16sp" />
+    </LinearLayout>
+</layout>

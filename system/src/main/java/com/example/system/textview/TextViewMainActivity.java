@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.example.system.R;
+import com.example.system.textview.copy.LongCopyActivity;
 import com.example.system.textview.marquee.MarqueeMainActivity;
 import com.example.system.textview.spannablestring.SpannableStringMainActivity;
 
@@ -24,12 +25,11 @@ public class TextViewMainActivity extends AppCompatActivity {
         int i = v.getId();
         if (i == R.id.to_spannable_string) {
             toActivity = SpannableStringMainActivity.class;
-
         } else if (i == R.id.to_marquee) {
             toActivity = MarqueeMainActivity.class;
-
+        } else if (i == R.id.to_long_copy) {
+            toActivity = LongCopyActivity.class;
         } else {
-
 
         }
         startActivity(new Intent(v.getContext(), toActivity));

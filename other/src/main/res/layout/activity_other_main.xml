@@ -43,6 +43,24 @@
             style="@style/button_style"
             android:onClick="onViewClicked"
             android:text="读取raw文件夹下" />
+
+        <Button
+            android:id="@+id/to_encode"
+            style="@style/button_style"
+            android:onClick="onViewClicked"
+            android:text="加密" />
+
+        <Button
+            android:id="@+id/to_output_log"
+            style="@style/button_style"
+            android:onClick="onViewClicked"
+            android:text="日志输出" />
+
+        <Button
+            android:id="@+id/to_fragment_switch"
+            style="@style/button_style"
+            android:onClick="onViewClicked"
+            android:text="Fragment切换" />
     </android.support.v7.widget.LinearLayoutCompat>
 
 </ScrollView>

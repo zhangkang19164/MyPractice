@@ -59,4 +59,37 @@
         <!--底部文字颜色-->
         <attr name="bottom_text_color" format="color" />
     </declare-styleable>
+
+    <declare-styleable name="LabelTextView">
+        <!--标签-->
+        <attr name="label" format="string" />
+        <!--标签的宽度-->
+        <attr name="label_width" format="dimension" />
+        <!--标签的字体颜色-->
+        <attr name="label_text_color" format="color" />
+        <!--标签的字体大小-->
+        <attr name="label_text_size" format="dimension" />
+
+    </declare-styleable>
+    <declare-styleable name="SelectedTabLayout">
+
+
+    </declare-styleable>
+
+    <declare-styleable name="TabBarLayout">
+        <!--按钮的背景颜色-->
+        <attr name="tabBarBackground" format="reference" />
+        <!--未选中的颜色-->
+        <attr name="tabBarTextColor" format="color" />
+        <!--选中的颜色-->
+        <attr name="tabBarSelectedTextColor" format="color" />
+        <!--字体大小-->
+        <attr name="tabBarTextSize" format="dimension" />
+        <!--是否加粗-->
+        <attr name="tabBarTextBold" format="boolean" />
+        <!--如果有圆角的话，有边框的话会用到改属性，设置到左边第一个按钮的背景-->
+        <attr name="tabBarLeftBackground" format="reference" />
+        <!--如果有圆角的话，有边框的话会用到改属性，设置到右边第一个按钮的背景-->
+        <attr name="tabBarRightBackground" format="reference" />
+    </declare-styleable>
 </resources>

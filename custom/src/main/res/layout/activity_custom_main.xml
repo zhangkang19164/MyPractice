@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.practice.customview.CustomMainActivity">
+    android:orientation="vertical">
+
+    <com.example.custom.widget.text.LabelTextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="你好"
+        app:label="标签"
+        app:label_text_color="@color/_FF3E30"
+        app:label_width="20dp" />
 
     <Button
         android:id="@+id/to_LinearLayoutCompat"
@@ -35,11 +42,13 @@
         style="@style/button_style"
         android:onClick="onViewClicked"
         android:text="RecyclerView侧滑菜单" />
+
     <Button
         android:id="@+id/to_xiaomi_weather"
         style="@style/button_style"
         android:onClick="onViewClicked"
         android:text="仿小米天气" />
+
     <Button
         android:id="@+id/to_bezier"
         style="@style/button_style"

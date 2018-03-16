@@ -61,6 +61,12 @@
             style="@style/button_style"
             android:onClick="onViewClicked"
             android:text="图片选择器" />
+
+        <Button
+            android:id="@+id/to_permissions"
+            style="@style/button_style"
+            android:onClick="onViewClicked"
+            android:text="权限申请" />
     </android.support.v7.widget.LinearLayoutCompat>
 
 </ScrollView>

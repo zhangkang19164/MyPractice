@@ -53,7 +53,7 @@ public class GloriousRecyclerView extends RecyclerView{
         super.setAdapter(mGloriousAdapter);
     }
 
-    private class GloriousAdapter extends RecyclerView.Adapter<ViewHolder> {
+    private class GloriousAdapter extends RecyclerView.Adapter {
 
         private Adapter mOriginalAdapter;
         private int ITEM_TYPE_NORMAL = 0;

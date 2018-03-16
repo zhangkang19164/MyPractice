@@ -1,8 +1,10 @@
 package com.example.dependencies;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
@@ -15,6 +17,10 @@ import com.example.dependencies.qrcode.QRCodeActivity;
 import com.example.dependencies.rxjava.RxJavaMainActivity;
 import com.example.dependencies.wheelview.WheelviewMainActivity;
 import com.example.dependencies.xrecyclerview.XRecyclerViewActivity;
+
+import java.util.List;
+
+import pub.devrel.easypermissions.EasyPermissions;
 
 
 public class DependenciesMainActivity extends AppCompatActivity {
@@ -47,9 +53,12 @@ public class DependenciesMainActivity extends AppCompatActivity {
             toActivity = GreenDaoActivity.class;
         } else if (i == R.id.to_matisse) {
             toActivity = MatisseMainActivity.class;
+        } else if (i == R.id.to_permissions) {
+            toActivity = PermissionsActivity.class;
         } else {
             toActivity = DependenciesMainActivity.class;
         }
         startActivity(new Intent(view.getContext(), toActivity));
     }
+
 }

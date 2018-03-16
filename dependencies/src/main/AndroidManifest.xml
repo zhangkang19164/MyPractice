@@ -21,7 +21,10 @@
         <activity android:name=".glide.GlideActivity" />
         <activity android:name=".qrcode.QRCodeActivity" />
         <activity android:name=".greendao.GreenDaoActivity" />
-        <activity android:name=".matisse.MatisseMainActivity"/>
+        <activity android:name=".matisse.MatisseMainActivity" />
+        <activity
+            android:name=".PermissionsActivity"
+            android:theme="@style/Transparent" />
     </application>
 
 </manifest>

@@ -4,9 +4,12 @@
     android:layout_height="match_parent">
 
     <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/root_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:tag="skin:shape_corner_3:background">
+
 
         <Button
             android:id="@+id/to_system_view"
@@ -18,13 +21,13 @@
             android:id="@+id/to_dependencies"
             style="@style/button_style"
             android:onClick="onViewClicked"
-            android:text="第三方库" />
+            android:text="第三方控件" />
 
         <Button
             android:id="@+id/to_custom_view"
             style="@style/button_style"
             android:onClick="onViewClicked"
-            android:text="自定义View相关" />
+            android:text="自定义控件" />
 
         <Button
             android:id="@+id/to_other"
@@ -32,7 +35,17 @@
             android:onClick="onViewClicked"
             android:text="其他的" />
 
+        <Button
+            android:id="@+id/skin"
+            style="@style/button_style"
+            android:onClick="onViewClicked"
+            android:text="换肤" />
 
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/_3C9FFC"
+            android:text="单选框" />
     </android.support.v7.widget.LinearLayoutCompat>
 
 </ScrollView>

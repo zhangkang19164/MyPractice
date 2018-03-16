@@ -23,7 +23,10 @@
         <activity android:name=".databinding.customattributes.CustomAttributesActivity" />
         <activity android:name=".setting.SettingActivity" />
         <activity android:name=".setting.language.SettingLanguageActivity" />
-        <activity android:name=".databinding.include.DataBindingIncludeActivity"></activity>
+        <activity android:name=".databinding.include.DataBindingIncludeActivity" />
+        <activity android:name=".encode.EncodeMainActivity" />
+        <activity android:name=".outputlog.OutputLogMainActivity" />
+        <activity android:name=".fragment.FragmentSwitchActivity"></activity>
     </application>
 
 </manifest>

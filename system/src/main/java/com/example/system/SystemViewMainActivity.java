@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.common.base.BaseActivity;
 import com.example.system.dialog.DialogMainActivity;
 import com.example.system.expandablelistview.ExpandableListViewMainActivity;
 import com.example.system.fragment.FragmentMainActivity;
@@ -21,7 +22,7 @@ import com.example.system.textview.TextViewMainActivity;
 import com.example.system.viewpage.ViewPageMainActivity;
 
 
-public class SystemViewMainActivity extends AppCompatActivity {
+public class SystemViewMainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,5 +108,7 @@ public class SystemViewMainActivity extends AppCompatActivity {
         textView.setTextColor(color);
         return snackbar;
     }
+
+
 
 }

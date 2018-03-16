@@ -34,7 +34,9 @@
         <activity android:name=".textview.marquee.MarqueeMainActivity" />
         <activity android:name=".recyclerview.drag.DragRecyclerViewActivity" />
         <activity android:name=".recyclerview.pinedview.PinnedHeaderActivity" />
-        <activity android:name=".fragment.FragmentMainActivity"></activity>
+        <activity android:name=".fragment.FragmentMainActivity" />
+        <activity android:name=".view.web.WebViewActivity" />
+        <activity android:name=".textview.copy.LongCopyActivity"></activity>
     </application>
 
 </manifest>

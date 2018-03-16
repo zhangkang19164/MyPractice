@@ -269,7 +269,6 @@ public class SystemDialogActivity extends AppCompatActivity {
         progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);//设置进度条样式 圆形和水平
 //		progressDialog.setProgressDrawable();		// 进度条的样式
 
-
         progressDialog.show();
     }
 

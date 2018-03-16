@@ -1,1 +1,1 @@
-include ':app', ':lib', ':common', ':system', ':dependencies', ':custom', ':other', ':json'
+include ':app', ':lib', ':common', ':system', ':dependencies', ':custom', ':other', ':json', ':log', ':skin_module', ':lib2'

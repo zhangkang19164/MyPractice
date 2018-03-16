@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".systemview.textview.TextViewMainActivity">
+    android:orientation="vertical">
 
     <Button
         android:id="@+id/to_spannable_string"
@@ -17,4 +15,10 @@
         style="@style/button_style"
         android:onClick="onClick"
         android:text="自动滚动" />
+
+    <Button
+        android:id="@+id/to_long_copy"
+        style="@style/button_style"
+        android:onClick="onClick"
+        android:text="点击复制" />
 </LinearLayout>

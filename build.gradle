@@ -4,9 +4,10 @@ buildscript {
     repositories {
         jcenter()
         mavenCentral()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.android.tools.build:gradle:3.0.1'
         classpath 'com.novoda:bintray-release:0.4.0'
         classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2' // add plugin
         // NOTE: Do not place your application dependencies here; they belong
@@ -41,7 +42,7 @@ allprojects {
         //已经充分测试通过的版本
         targetSdkVersion = 26
         //
-        supportVersion = "26.0.0-alpha1"
+        supportVersion = "27.0.2"
         annotationsVersion = "26.0.2"
 
         daggerVersion = "2.0"
